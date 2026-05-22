@@ -3,274 +3,271 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Art by Heart | Handmade Crochet</title>
+    
+    <title>Art by Heart | Premium Handmade Crochet Store Pakistan</title>
+    <meta name="description" content="Discover premium, handmade soft and comfortable crochet items at Art by Heart Pakistan. Shop our aesthetic handwarmers, slouchy beanies, and forever sunflowers crafted with love.">
+    <meta name="keywords" content="Art by Heart, Crochet Pakistan, Handmade Crochet, Crochet Handwarmers, Slouchy Beanie, Crochet Sunflower, Custom Crochet Gifts">
+    <meta name="author" content="Art by Heart">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Art by Heart | Premium Handmade Crochet Store">
+    <meta property="og:description" content="Beautifully crafted, soft, warm, and comfortable crochet accessories and decor made with love in Pakistan.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://artbyheart00.github.io/">
+    <meta property="og:image" content="images/Sunflower (large).jpeg">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
     <style>
-        :root {
-            --bg-color: #FDFBF7;
-            --text-color: #222222;
-            --accent-color: #D4778B;
-            --white: #ffffff;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: 'Montserrat', sans-serif;
-            line-height: 1.6;
-            overflow-x: hidden;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #FAFAFA;
+            color: #2D2D2D;
         }
-
         h1, h2, h3 {
             font-family: 'Playfair Display', serif;
-            font-weight: 600;
         }
-
-        /* --- Hero Section --- */
-        .hero {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .logo-placeholder {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            border: 3px solid var(--accent-color);
-            background-color: #f3ece4;
-            margin-bottom: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: var(--accent-color);
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .hero h1 {
-            font-size: clamp(3rem, 10vw, 5rem);
-            margin-bottom: 10px;
-            letter-spacing: -1px;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            font-style: italic;
-            color: #555;
-            margin-bottom: 40px;
-        }
-
-        /* --- Portfolio Section --- */
-        .portfolio {
-            padding: 100px 10%;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 60px;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 2px;
-            background: var(--accent-color);
-            margin: 15px auto 0;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-        }
-
-        .card {
-            background: var(--white);
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-            transition: transform 0.3s ease;
-            border: 1px solid rgba(212, 119, 139, 0.1);
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-        }
-
-        .card-img {
-            width: 100%;
-            height: 350px;
-            background-color: #eee;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #999;
-            object-fit: cover;
-        }
-
-        .card-content {
-            padding: 25px;
-            text-align: center;
-        }
-
-        .card-content h3 {
-            margin-bottom: 15px;
-            font-size: 1.4rem;
-        }
-
-        .btn-outline {
-            display: inline-block;
-            padding: 10px 25px;
-            border: 1px solid var(--accent-color);
-            color: var(--accent-color);
-            text-decoration: none;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .btn-outline:hover {
-            background-color: var(--accent-color);
-            color: var(--white);
-        }
-
-        /* --- Contact/Order Section --- */
-        .contact {
-            padding: 100px 10%;
-            background-color: #f7f2ed;
-            text-align: center;
-        }
-
-        .contact p {
-            max-width: 600px;
-            margin: 0 auto 40px;
-            font-size: 1.1rem;
-        }
-
-        .button-group {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .btn-solid {
-            display: inline-block;
-            padding: 15px 40px;
-            background-color: var(--accent-color);
-            color: var(--white);
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: opacity 0.3s ease, transform 0.3s ease;
-        }
-
-        .btn-solid:hover {
-            opacity: 0.9;
-            transform: scale(1.05);
-        }
-
-        .btn-whatsapp {
-            background-color: #25D366; /* WhatsApp Green */
-        }
-
-        /* --- Footer --- */
-        footer {
-            padding: 40px;
-            text-align: center;
-            font-size: 0.8rem;
-            color: #888;
-            letter-spacing: 1px;
-        }
-
-        /* --- Responsive --- */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 3.5rem; }
-            .portfolio { padding: 60px 5%; }
-            .grid { gap: 20px; }
+        .cart-sidebar {
+            transition: transform 0.3s ease-in-out;
         }
     </style>
 </head>
 <body>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="logo-placeholder">
-            <!-- Replace this div with an <img> tag once your logo is ready -->
-            <span>Logo Placeholder</span>
-        </div>
-        <h1>Art by Heart</h1>
-        <p>Handmade with Love & Yarn</p>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section class="portfolio">
-        <h2 class="section-title">My Creations</h2>
-        <div class="grid">
-            <!-- Item 1 -->
-            <div class="card">
-                <div class="card-img">Crochet Plushies Image</div>
-                <div class="card-content">
-                    <h3>Crochet Plushies</h3>
-                    <a href="#" class="btn-outline">View Details</a>
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="text-2xl md:text-3xl font-bold tracking-wide text-neutral-800">Art by Heart</a>
+            
+            <div class="flex items-center gap-6">
+                <div class="relative hidden sm:block w-64">
+                    <input type="text" id="searchBar" onkeyup="filterProducts()" placeholder="Search products..." class="w-full px-4 py-2 border border-gray-200 rounded-full text-sm focus:outline-none focus:border-neutral-400">
                 </div>
-            </div>
-            <!-- Item 2 -->
-            <div class="card">
-                <div class="card-img">Aesthetic Cardigans Image</div>
-                <div class="card-content">
-                    <h3>Aesthetic Cardigans</h3>
-                    <a href="#" class="btn-outline">View Details</a>
-                </div>
-            </div>
-            <!-- Item 3 -->
-            <div class="card">
-                <div class="card-img">Cute Coasters Image</div>
-                <div class="card-content">
-                    <h3>Cute Coasters</h3>
-                    <a href="#" class="btn-outline">View Details</a>
-                </div>
+                <button onclick="toggleCart()" class="relative p-2 text-neutral-700 hover:text-black focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                    </svg>
+                    <span id="cartCount" class="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white transform translate-x-1/2 -translate-y-1/2 bg-neutral-800 rounded-full">0</span>
+                </button>
             </div>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact">
-        <h2 class="section-title">Place an Order</h2>
-        <p>Every piece is uniquely handcrafted just for you. To place a custom order or inquire about pricing, please reach out via social media or message me directly.</p>
-        
-        <div class="button-group">
-            <a href="https://www.instagram.com/artbyheart.00/" target="_blank" class="btn-solid">Instagram</a>
-            <a href="https://wa.me/YOURNUMBERHERE" target="_blank" class="btn-solid btn-whatsapp">WhatsApp</a>
+        <div class="px-4 pb-3 sm:hidden">
+            <input type="text" id="searchBarMobile" onkeyup="filterProductsMobile()" placeholder="Search products..." class="w-full px-4 py-2 border border-gray-200 rounded-full text-sm focus:outline-none focus:border-neutral-400">
         </div>
-    </section>
+    </header>
 
-    <!-- Footer -->
-    <footer>
-        &copy; 2024 ART BY HEART. ALL RIGHTS RESERVED.
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <h1 class="text-4xl md:text-5xl font-normal mb-4 text-neutral-800">Handmade with Love, Worn with Comfort</h1>
+            <p class="text-gray-500 text-sm md:text-base font-light uppercase tracking-widest">Premium Crochet Catalogue</p>
+        </div>
+
+        <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12">
+            
+            <div class="product-card group" data-name="stripped handwarmers">
+                <div class="aspect-square w-full overflow-hidden rounded-2xl bg-gray-100 mb-4 relative">
+                    <img src="images/Stripped handwarmers.jpeg" alt="Stripped handwarmers by Art by Heart" class="h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-300">
+                </div>
+                <h3 class="text-lg font-medium text-neutral-800 mb-1">Stripped handwarmers</h3>
+                <p class="text-xs text-gray-500 mb-2 font-light leading-relaxed">Handmade soft, warm and comfortable crochet handwarmers</p>
+                <div class="flex items-center justify-between mt-auto">
+                    <span class="text-base font-medium text-neutral-900">PKR 1,199.00</span>
+                    <button onclick="addToCart('Stripped handwarmers', 1199.00)" class="text-xs uppercase tracking-wider bg-neutral-800 hover:bg-neutral-700 text-white px-4 py-2 rounded-full transition-colors">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card group" data-name="slouchy beanie">
+                <div class="aspect-square w-full overflow-hidden rounded-2xl bg-gray-100 mb-4 relative">
+                    <img src="images/Slouchy Beanie.jpeg" alt="Slouchy Beanie by Art by Heart" class="h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-300">
+                </div>
+                <h3 class="text-lg font-medium text-neutral-800 mb-1">Slouchy Beanie</h3>
+                <p class="text-xs text-gray-500 mb-2 font-light leading-relaxed">Handmade soft, warm and comfortable crochet slouchy beanie for winters</p>
+                <div class="flex items-center justify-between mt-auto">
+                    <span class="text-base font-medium text-neutral-900">PKR 1,499.00</span>
+                    <button onclick="addToCart('Slouchy Beanie', 1499.00)" class="text-xs uppercase tracking-wider bg-neutral-800 hover:bg-neutral-700 text-white px-4 py-2 rounded-full transition-colors">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card group" data-name="cat paw design handwarmers">
+                <div class="aspect-square w-full overflow-hidden rounded-2xl bg-gray-100 mb-4 relative">
+                    <img src="images/Cat Paw Design Handwarmers.jpeg" alt="Cat Paw Design Handwarmers by Art by Heart" class="h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-300">
+                </div>
+                <h3 class="text-lg font-medium text-neutral-800 mb-1">Cat Paw Design Handwarmers</h3>
+                <p class="text-xs text-gray-500 mb-2 font-light leading-relaxed">Cute Handmade cat paw design handwarmers perfect for cold weather made with soft and comfortable yarn with love</p>
+                <div class="flex items-center justify-between mt-auto">
+                    <span class="text-base font-medium text-neutral-900">PKR 1,199.00</span>
+                    <button onclick="addToCart('Cat Paw Design Handwarmers', 1199.00)" class="text-xs uppercase tracking-wider bg-neutral-800 hover:bg-neutral-700 text-white px-4 py-2 rounded-full transition-colors">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card group" data-name="sunflower large">
+                <div class="aspect-square w-full overflow-hidden rounded-2xl bg-gray-100 mb-4 relative">
+                    <img src="images/Sunflower (large).jpeg" alt="Sunflower large by Art by Heart" class="h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-300">
+                </div>
+                <h3 class="text-lg font-medium text-neutral-800 mb-1">Sunflower (large)</h3>
+                <p class="text-xs text-gray-500 mb-2 font-light leading-relaxed">Handmade Forever Crochet Sunflower perfect for home decor and gifting your loved ones.</p>
+                <div class="flex items-center justify-between mt-auto">
+                    <span class="text-base font-medium text-neutral-900">PKR 1,999.00</span>
+                    <button onclick="addToCart('Sunflower (large)', 1999.00)" class="text-xs uppercase tracking-wider bg-neutral-800 hover:bg-neutral-700 text-white px-4 py-2 rounded-full transition-colors">Add to Cart</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="cartSidebar" class="cart-sidebar fixed inset-y-0 right-0 w-full sm:w-96 bg-white shadow-2xl z-50 translate-x-full flex flex-col">
+        <div class="p-6 border-b border-gray-100 flex items-center justify-between">
+            <h2 class="text-xl font-medium text-neutral-800">Your Basket</h2>
+            <button onclick="toggleCart()" class="text-gray-400 hover:text-black">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <div id="cartItems" class="flex-1 overflow-y-auto p-6 space-y-4">
+            <p id="emptyCartText" class="text-gray-400 text-sm text-center py-8">Your cart is empty.</p>
+        </div>
+
+        <div class="p-6 border-t border-gray-100 bg-gray-50">
+            <div class="flex justify-between text-base font-medium text-neutral-900 mb-4">
+                <span>Subtotal</span>
+                <span id="cartSubtotal">PKR 0.00</span>
+            </div>
+            <p class="text-xs text-gray-400 mb-4">Shipping charges and order confirmations will be finalized via WhatsApp text.</p>
+            <button onclick="checkoutViaWhatsApp()" class="w-full text-center bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3 rounded-xl transition-colors tracking-wide flex items-center justify-center gap-2">
+                Order via WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <div id="cartOverlay" onclick="toggleCart()" class="fixed inset-0 bg-black/30 z-40 hidden backdrop-blur-xs"></div>
+
+    <footer class="bg-white border-t border-gray-100 mt-24 py-8 text-center text-xs text-gray-400 font-light">
+        <p>&copy; 2026 Art by Heart Crochet. Crafted with Love. All Rights Reserved.</p>
     </footer>
 
+    <script>
+        let cart = [];
+
+        function toggleCart() {
+            const sidebar = document.getElementById('cartSidebar');
+            const overlay = document.getElementById('cartOverlay');
+            sidebar.classList.toggle('translate-x-full');
+            overlay.classList.toggle('hidden');
+        }
+
+        function addToCart(name, price) {
+            const existingItem = cart.find(item => item.name === name);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ name, price, quantity: 1 });
+            }
+            updateCartUI();
+            toggleCart();
+        }
+
+        function updateQuantity(name, amount) {
+            const item = cart.find(item => item.name === name);
+            if (item) {
+                item.quantity += amount;
+                if (item.quantity <= 0) {
+                    cart = cart.filter(i => i.name !== name);
+                }
+            }
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const cartItemsContainer = document.getElementById('cartItems');
+            const emptyText = document.getElementById('emptyCartText');
+            const countBadge = document.getElementById('cartCount');
+            const subtotalText = document.getElementById('cartSubtotal');
+            
+            cartItemsContainer.innerHTML = '';
+            let totalItems = 0;
+            let subtotal = 0;
+
+            if (cart.length === 0) {
+                cartItemsContainer.appendChild(emptyText);
+                emptyText.classList.remove('hidden');
+            } else {
+                emptyText.classList.add('hidden');
+                cart.forEach(item => {
+                    totalItems += item.quantity;
+                    subtotal += (item.price * item.quantity);
+
+                    const itemElement = document.createElement('div');
+                    itemElement.className = 'flex items-center justify-between border-b border-gray-100 pb-3';
+                    itemElement.innerHTML = `
+                        <div>
+                            <h4 class="text-sm font-medium text-neutral-800">${item.name}</h4>
+                            <p class="text-xs text-gray-400">PKR ${item.price.toLocaleString()}.00</p>
+                        </div>
+                        <div class="flex items-center gap-2 bg-gray-100 px-2 py-1 rounded-lg">
+                            <button onclick="updateQuantity('${item.name}', -1)" class="text-sm px-1 font-bold text-gray-500 hover:text-black">-</button>
+                            <span class="text-xs font-medium w-4 text-center">${item.quantity}</span>
+                            <button onclick="updateQuantity('${item.name}', 1)" class="text-sm px-1 font-bold text-gray-500 hover:text-black">+</button>
+                        </div>
+                    `;
+                    cartItemsContainer.appendChild(itemElement);
+                });
+            }
+
+            countBadge.innerText = totalItems;
+            subtotalText.innerText = `PKR ${subtotal.toLocaleString()}.00`;
+        }
+
+        function checkoutViaWhatsApp() {
+            if (cart.length === 0) {
+                alert("Your basket is empty. Add items before placing an order!");
+                return;
+            }
+
+            let phoneNumber = "923302588945";
+            let message = "Hi Art by Heart! 🌸 I would like to order the following items:\n\n";
+            let subtotal = 0;
+
+            cart.forEach((item, index) => {
+                let itemTotal = item.price * item.quantity;
+                subtotal += itemTotal;
+                message += `${index + 1}. *${item.name}* (x${item.quantity}) - PKR ${itemTotal.toLocaleString()}.00\n`;
+            });
+
+            message += `\n*Total Cart Amount:* PKR ${subtotal.toLocaleString()}.00\n\nPlease guide me regarding delivery parameters! Thank you.`;
+            
+            let encodedMessage = encodeURIComponent(message);
+            window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+        }
+
+        function filterProducts() {
+            const query = document.getElementById('searchBar').value.toLowerCase();
+            const cards = document.querySelectorAll('.product-card');
+            cards.forEach(card => {
+                const productName = card.getAttribute('data-name');
+                if (productName.includes(query)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+
+        function filterProductsMobile() {
+            const query = document.getElementById('searchBarMobile').value.toLowerCase();
+            const cards = document.querySelectorAll('.product-card');
+            cards.forEach(card => {
+                const productName = card.getAttribute('data-name');
+                if (productName.includes(query)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+    </script>
 </body>
 </html>
