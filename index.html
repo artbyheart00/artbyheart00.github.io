@@ -33,6 +33,14 @@
         .cart-sidebar {
             transition: transform 0.3s ease-in-out;
         }
+        /* Premium 3D-like Lift Effect */
+        .product-card {
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.05);
+        }
     </style>
 </head>
 <body>
@@ -66,55 +74,68 @@
 
         <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12">
             
-            <div class="product-card group" data-name="stripped handwarmers">
-                <div class="aspect-square w-full overflow-hidden rounded-2xl bg-gray-100 mb-4 relative">
-                    <img src="images/Stripped handwarmers.jpeg" alt="Stripped handwarmers by Art by Heart" class="h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-300">
+            <div class="product-card bg-white p-3 rounded-2xl group" data-name="stripped handwarmers">
+                <div class="aspect-square w-full overflow-hidden rounded-xl bg-gray-100 mb-4 relative">
+                    <img src="images/Stripped handwarmers.jpeg" alt="Stripped handwarmers by Art by Heart" class="h-full w-full object-cover object-center group-hover:scale-102 transition-transform duration-300">
                 </div>
                 <h3 class="text-lg font-medium text-neutral-800 mb-1">Stripped handwarmers</h3>
-                <p class="text-xs text-gray-500 mb-2 font-light leading-relaxed">Handmade soft, warm and comfortable crochet handwarmers</p>
+                <p class="text-xs text-gray-500 mb-3 font-light leading-relaxed">Handmade soft, warm and comfortable crochet handwarmers</p>
                 <div class="flex items-center justify-between mt-auto">
                     <span class="text-base font-medium text-neutral-900">PKR 1,199.00</span>
-                    <button onclick="addToCart('Stripped handwarmers', 1199.00)" class="text-xs uppercase tracking-wider bg-neutral-800 hover:bg-neutral-700 text-white px-4 py-2 rounded-full transition-colors">Add to Cart</button>
+                    <button onclick="addToCart('Stripped handwarmers', 1199.00)" class="text-xs uppercase tracking-wider bg-neutral-800 hover:bg-neutral-700 text-white px-4 py-2 rounded-full transition-colors cursor-pointer">Add to Cart</button>
                 </div>
             </div>
 
-            <div class="product-card group" data-name="slouchy beanie">
-                <div class="aspect-square w-full overflow-hidden rounded-2xl bg-gray-100 mb-4 relative">
-                    <img src="images/Slouchy Beanie.jpeg" alt="Slouchy Beanie by Art by Heart" class="h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-300">
+            <div class="product-card bg-white p-3 rounded-2xl group" data-name="slouchy beanie">
+                <div class="aspect-square w-full overflow-hidden rounded-xl bg-gray-100 mb-4 relative">
+                    <img src="images/Slouchy Beanie.jpeg" alt="Slouchy Beanie by Art by Heart" class="h-full w-full object-cover object-center group-hover:scale-102 transition-transform duration-300">
                 </div>
                 <h3 class="text-lg font-medium text-neutral-800 mb-1">Slouchy Beanie</h3>
-                <p class="text-xs text-gray-500 mb-2 font-light leading-relaxed">Handmade soft, warm and comfortable crochet slouchy beanie for winters</p>
+                <p class="text-xs text-gray-500 mb-3 font-light leading-relaxed">Handmade soft, warm and comfortable crochet slouchy beanie for winters</p>
                 <div class="flex items-center justify-between mt-auto">
                     <span class="text-base font-medium text-neutral-900">PKR 1,499.00</span>
-                    <button onclick="addToCart('Slouchy Beanie', 1499.00)" class="text-xs uppercase tracking-wider bg-neutral-800 hover:bg-neutral-700 text-white px-4 py-2 rounded-full transition-colors">Add to Cart</button>
+                    <button onclick="addToCart('Slouchy Beanie', 1499.00)" class="text-xs uppercase tracking-wider bg-neutral-800 hover:bg-neutral-700 text-white px-4 py-2 rounded-full transition-colors cursor-pointer">Add to Cart</button>
                 </div>
             </div>
 
-            <div class="product-card group" data-name="cat paw design handwarmers">
-                <div class="aspect-square w-full overflow-hidden rounded-2xl bg-gray-100 mb-4 relative">
-                    <img src="images/Cat Paw Design Handwarmers.jpeg" alt="Cat Paw Design Handwarmers by Art by Heart" class="h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-300">
+            <div class="product-card bg-white p-3 rounded-2xl group" data-name="cat paw design handwarmers">
+                <div class="aspect-square w-full overflow-hidden rounded-xl bg-gray-100 mb-4 relative">
+                    <img src="images/Cat Paw Design Handwarmers.jpeg" alt="Cat Paw Design Handwarmers by Art by Heart" class="h-full w-full object-cover object-center group-hover:scale-102 transition-transform duration-300">
                 </div>
                 <h3 class="text-lg font-medium text-neutral-800 mb-1">Cat Paw Design Handwarmers</h3>
-                <p class="text-xs text-gray-500 mb-2 font-light leading-relaxed">Cute Handmade cat paw design handwarmers perfect for cold weather made with soft and comfortable yarn with love</p>
+                <p class="text-xs text-gray-500 mb-3 font-light leading-relaxed">Cute Handmade cat paw design handwarmers perfect for cold weather made with soft and comfortable yarn with love</p>
                 <div class="flex items-center justify-between mt-auto">
                     <span class="text-base font-medium text-neutral-900">PKR 1,199.00</span>
-                    <button onclick="addToCart('Cat Paw Design Handwarmers', 1199.00)" class="text-xs uppercase tracking-wider bg-neutral-800 hover:bg-neutral-700 text-white px-4 py-2 rounded-full transition-colors">Add to Cart</button>
+                    <button onclick="addToCart('Cat Paw Design Handwarmers', 1199.00)" class="text-xs uppercase tracking-wider bg-neutral-800 hover:bg-neutral-700 text-white px-4 py-2 rounded-full transition-colors cursor-pointer">Add to Cart</button>
                 </div>
             </div>
 
-            <div class="product-card group" data-name="sunflower large">
-                <div class="aspect-square w-full overflow-hidden rounded-2xl bg-gray-100 mb-4 relative">
-                    <img src="images/Sunflower (large).jpeg" alt="Sunflower large by Art by Heart" class="h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-300">
+            <div class="product-card bg-white p-3 rounded-2xl group" data-name="sunflower large">
+                <div class="aspect-square w-full overflow-hidden rounded-xl bg-gray-100 mb-4 relative">
+                    <img src="images/Sunflower (large).jpeg" alt="Sunflower large by Art by Heart" class="h-full w-full object-cover object-center group-hover:scale-102 transition-transform duration-300">
                 </div>
                 <h3 class="text-lg font-medium text-neutral-800 mb-1">Sunflower (large)</h3>
-                <p class="text-xs text-gray-500 mb-2 font-light leading-relaxed">Handmade Forever Crochet Sunflower perfect for home decor and gifting your loved ones.</p>
+                <p class="text-xs text-gray-500 mb-3 font-light leading-relaxed">Handmade Forever Crochet Sunflower perfect for home decor and gifting your loved ones.</p>
                 <div class="flex items-center justify-between mt-auto">
                     <span class="text-base font-medium text-neutral-900">PKR 1,999.00</span>
-                    <button onclick="addToCart('Sunflower (large)', 1999.00)" class="text-xs uppercase tracking-wider bg-neutral-800 hover:bg-neutral-700 text-white px-4 py-2 rounded-full transition-colors">Add to Cart</button>
+                    <button onclick="addToCart('Sunflower (large)', 1999.00)" class="text-xs uppercase tracking-wider bg-neutral-800 hover:bg-neutral-700 text-white px-4 py-2 rounded-full transition-colors cursor-pointer">Add to Cart</button>
                 </div>
             </div>
 
         </div>
+
+        <section class="mt-32 max-w-xl mx-auto border-t border-gray-100 pt-16 text-center">
+            <h2 class="text-3xl font-normal text-neutral-800 mb-4">Get In Touch</h2>
+            <p class="text-sm text-gray-500 font-light mb-8 leading-relaxed">Have a custom request or want a specific design? Feel free to reach out to us directly for personalized orders and updates.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="https://wa.me/923302588945" target="_blank" class="w-full sm:w-auto px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-medium rounded-full transition-colors flex items-center justify-center gap-2">
+                    Chat on WhatsApp
+                </a>
+                <a href="#" class="w-full sm:w-auto px-6 py-3 border border-gray-200 hover:border-neutral-400 text-neutral-700 text-sm font-medium rounded-full transition-colors flex items-center justify-center gap-2">
+                    Follow on Instagram
+                </a>
+            </div>
+        </section>
     </main>
 
     <div id="cartSidebar" class="cart-sidebar fixed inset-y-0 right-0 w-full sm:w-96 bg-white shadow-2xl z-50 translate-x-full flex flex-col">
@@ -137,7 +158,7 @@
                 <span id="cartSubtotal">PKR 0.00</span>
             </div>
             <p class="text-xs text-gray-400 mb-4">Shipping charges and order confirmations will be finalized via WhatsApp text.</p>
-            <button onclick="checkoutViaWhatsApp()" class="w-full text-center bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3 rounded-xl transition-colors tracking-wide flex items-center justify-center gap-2">
+            <button onclick="checkoutViaWhatsApp()" class="w-full text-center bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3 rounded-xl transition-colors tracking-wide flex items-center justify-center gap-2 cursor-pointer">
                 Order via WhatsApp
             </button>
         </div>
