@@ -1,78 +1,91 @@
-<section class="mt-40 bg-white rounded-2xl p-8 md:p-12 shadow-xs border border-stone-200/40">
-    <div class="text-center mb-16">
-        <span class="text-[10px] uppercase tracking-[0.3em] font-semibold text-stone-400 block mb-3">Customer Feedback</span>
-        <h2 class="text-3xl font-light text-stone-800 tracking-tight leading-tight">What Our Community Says</h2>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Art by Heart | Premium Handmade Crochet Store Pakistan</title>
+    <meta name="description" content="Discover premium, handmade soft and comfortable crochet items at Art by Heart Pakistan. Shop our aesthetic handwarmers, slouchy beanies, and forever sunflowers crafted with love.">
+    <meta name="keywords" content="Art by Heart, Crochet Pakistan, Handmade Crochet, Crochet Handwarmers, Slouchy Beanie, Crochet Sunflower, Custom Crochet Gifts, Crochetique">
+    <meta name="author" content="Art by Heart">
+    <meta name="robots" content="index, follow">
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <meta property="og:title" content="Art by Heart | Premium Handmade Crochet Store">
+    <meta property="og:description" content="Beautifully crafted, soft, warm, and comfortable crochet accessories and decor made with love in Pakistan.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://artbyheart00.github.io/">
+    <meta property="og:image" content="images/Sunflower (large).jpeg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            background-color: #F5EFEB !important; /* Premium Editorial Cream Background */
+            color: #2D2D2D !important;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif !important;
+        }
+        .cart-sidebar {
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        }
         
-        <div class="bg-[#F5EFEB]/40 border border-stone-200/60 rounded-xl p-6 flex flex-col justify-between transition-all hover:shadow-md hover:border-stone-300">
-            <div>
-                <div class="flex items-center gap-1 mb-4 text-amber-500/80">
-                    <span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span>
-                </div>
-                <p class="text-stone-600 text-xs font-light leading-relaxed mb-6">
-                    "Traditional jasmine gajras hamesha synthetic lagte thay, but these yarn gajras are so elegant and soft! Wore them to a family dholki and everyone kept asking where I got them."
-                </p>
-            </div>
-            <div class="flex items-center gap-3 pt-4 border-t border-stone-200/60">
-                <div class="w-9 h-9 rounded-full bg-stone-800 flex items-center justify-center text-xs font-medium text-stone-100">AK</div>
-                <div>
-                    <h4 class="text-xs font-medium text-stone-800">Ayesha Khan</h4>
-                </div>
-            </div>
-        </div>
+        /* 3D Global Perspective Engine */
+        .premium-grid-container {
+            perspective: 1500px !important;
+            perspective-origin: center center !important;
+        }
+        
+        /* Strict Card Layout mimicking the exact proportions of your uploaded design */
+        .premium-3d-card {
+            background-color: #FFFFFF !important;
+            border-radius: 12px !important;
+            padding: 18px !important;
+            box-shadow: 0 10px 30px rgba(45, 40, 35, 0.03) !important;
+            transform-style: preserve-3d !important;
+            will-change: transform, box-shadow;
+            transition: transform 0.5s cubic-bezier(0.25, 1, 0.33, 1), box-shadow 0.5s cubic-bezier(0.25, 1, 0.33, 1) !important;
+        }
 
-        <div class="bg-[#F5EFEB]/40 border border-stone-200/60 rounded-xl p-6 flex flex-col justify-between transition-all hover:shadow-md hover:border-stone-300">
-            <div>
-                <div class="flex items-center gap-1 mb-4 text-amber-500/80">
-                    <span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span>
-                </div>
-                <p class="text-stone-600 text-xs font-light leading-relaxed mb-6">
-                    "Ordered the large forever sunflower as a birthday gift for my best friend. The stitching details are absolutely flawless! It’s the perfect everlasting aesthetic room decor."
-                </p>
-            </div>
-            <div class="flex items-center gap-3 pt-4 border-t border-stone-200/60">
-                <div class="w-9 h-9 rounded-full bg-stone-800 flex items-center justify-center text-xs font-medium text-stone-100">ZM</div>
-                <div>
-                    <h4 class="text-xs font-medium text-stone-800">Zainab Malik</h4>
-                </div>
-            </div>
-        </div>
+        /* Default Static Subtle Rotations for asymmetrical layout look */
+        .card-tilt-left {
+            transform: rotateZ(-1.5deg) translate3d(0,0,0) !important;
+        }
+        .card-tilt-right {
+            transform: rotateZ(2deg) translate3d(0,0,0) !important;
+        }
+        .card-tilt-slight {
+            transform: rotateZ(-0.5deg) translate3d(0,0,0) !important;
+        }
 
-        <div class="bg-[#F5EFEB]/40 border border-stone-200/60 rounded-xl p-6 flex flex-col justify-between transition-all hover:shadow-md hover:border-stone-300">
-            <div>
-                <div class="flex items-center gap-1 mb-4 text-amber-500/80">
-                    <span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span>
-                </div>
-                <p class="text-stone-600 text-xs font-light leading-relaxed mb-6">
-                    "Unbelievably cute and super warm to wear. The cat paw 3D pads look exactly like the reference layout pictures. Perfect minimalist cozy accessory for winters."
-                </p>
-            </div>
-            <div class="flex items-center gap-3 pt-4 border-t border-stone-200/60">
-                <div class="w-9 h-9 rounded-full bg-stone-800 flex items-center justify-center text-xs font-medium text-stone-100">SF</div>
-                <div>
-                    <h4 class="text-xs font-medium text-stone-800">Sana Fatima</h4>
-                </div>
-            </div>
-        </div>
+        /* Hover states that replicate the reference screen layer pop-out */
+        .premium-3d-card:hover {
+            z-index: 30 !important;
+            box-shadow: 0 35px 60px -15px rgba(45, 40, 35, 0.15) !important;
+        }
 
-        <div class="bg-[#F5EFEB]/40 border border-stone-200/60 rounded-xl p-6 flex flex-col justify-between transition-all hover:shadow-md hover:border-stone-300">
-            <div>
-                <div class="flex items-center gap-1 mb-4 text-amber-500/80">
-                    <span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span>
-                </div>
-                <p class="text-stone-600 text-xs font-light leading-relaxed mb-6">
-                    "The premium yarn texture is extremely comfortable and doesn't feel itchy at all. Fits beautifully with a nice modern slouchy drape. 10/10 crafting work!"
-                </p>
-            </div>
-            <div class="flex items-center gap-3 pt-4 border-t border-stone-200/60">
-                <div class="w-9 h-9 rounded-full bg-stone-800 flex items-center justify-center text-xs font-medium text-stone-100">HA</div>
-                <div>
-                    <h4 class="text-xs font-medium text-stone-800">Hamza Ali</h4>
-                </div>
-            </div>
-        </div>
+        .card-tilt-left:hover {
+            transform: translate3d(-4px, -14px, 40px) rotateX(8deg) rotateY(-12deg) rotateZ(-2deg) !important;
+        }
+        .card-tilt-right:hover {
+            transform: translate3d(4px, -14px, 40px) rotateX(8deg) rotateY(12deg) rotateZ(3deg) !important;
+        }
+        .card-tilt-slight:hover {
+            transform: translate3d(0px, -14px, 40px) rotateX(10deg) rotateY(-4deg) rotateZ(-1deg) !important;
+        }
 
-    </div>
-</section>
+        /* Sharp Minimalist Buttons from layout blueprint */
+        .shop-now-btn {
+            border: 1px solid #2D2D2D !important;
+            color: #2D2D2D !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.1em !important;
+            font-size: 0.75rem !important;
+            font-weight: 500 !important;
+            padding: 0.6rem 2rem !important;
+            transition: all 0.3
