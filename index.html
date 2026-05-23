@@ -3,560 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Art by Heart | Premium Handmade Crochet Store Pakistan</title>
-    <meta name="description" content="Discover premium, handmade soft and comfortable crochet items at Art by Heart Pakistan. Shop our aesthetic handwarmers, slouchy beanies, and forever sunflowers crafted with love.">
-    <meta name="keywords" content="Art by Heart, Crochet Pakistan, Handmade Crochet, Crochet Handwarmers, Slouchy Beanie, Crochet Sunflower, Custom Crochet Gifts, Crochetique">
-    <meta name="author" content="Art by Heart">
-    <meta name="robots" content="index, follow">
-
-    <meta property="og:title" content="Art by Heart | Premium Handmade Crochet Store">
-    <meta property="og:description" content="Beautifully crafted, soft, warm, and comfortable crochet accessories and decor made with love in Pakistan.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://artbyheart00.github.io/">
-    <meta property="og:image" content="images/Sunflower (large).jpeg">
-
+    <title>Art by Heart | Crochetique</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <style>
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif !important;
-            background-color: #F5EFEB !important; /* Premium Editorial Cream Background */
-            color: #2D2D2D !important;
-            overflow-x: hidden;
-        }
-        h1, h2, h3, h4 {
-            font-family: 'Playfair Display', serif !important;
-        }
-        .cart-sidebar {
-            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
-        }
-        
-        /* 3D Global Perspective Engine */
-        .premium-grid-container {
-            perspective: 1500px !important;
-            perspective-origin: center center !important;
-        }
-        
-        /* Strict Card Layout mimicking the exact proportions of your uploaded design */
-        .premium-3d-card {
-            background-color: #FFFFFF !important;
-            border-radius: 12px !important;
-            padding: 18px !important;
-            box-shadow: 0 10px 30px rgba(45, 40, 35, 0.03) !important;
-            transform-style: preserve-3d !important;
-            will-change: transform, box-shadow;
-            transition: transform 0.5s cubic-bezier(0.25, 1, 0.33, 1), box-shadow 0.5s cubic-bezier(0.25, 1, 0.33, 1) !important;
-        }
-
-        /* Default Static Subtle Rotations for asymmetrical layout look */
-        .card-tilt-left {
-            transform: rotateZ(-1.5deg) translate3d(0,0,0) !important;
-        }
-        .card-tilt-right {
-            transform: rotateZ(2deg) translate3d(0,0,0) !important;
-        }
-        .card-tilt-slight {
-            transform: rotateZ(-0.5deg) translate3d(0,0,0) !important;
-        }
-
-        /* Hover states that replicate the reference screen layer pop-out */
-        .premium-3d-card:hover {
-            z-index: 30 !important;
-            box-shadow: 0 35px 60px -15px rgba(45, 40, 35, 0.15) !important;
-        }
-
-        .card-tilt-left:hover {
-            transform: translate3d(-4px, -14px, 40px) rotateX(8deg) rotateY(-12deg) rotateZ(-2deg) !important;
-        }
-        .card-tilt-right:hover {
-            transform: translate3d(4px, -14px, 40px) rotateX(8deg) rotateY(12deg) rotateZ(3deg) !important;
-        }
-        .card-tilt-slight:hover {
-            transform: translate3d(0px, -14px, 40px) rotateX(10deg) rotateY(-4deg) rotateZ(-1deg) !important;
-        }
-
-        /* Sharp Minimalist Buttons from layout blueprint */
-        .shop-now-btn {
-            border: 1px solid #2D2D2D !important;
-            color: #2D2D2D !important;
-            text-transform: uppercase !important;
-            letter-spacing: 0.1em !important;
-            font-size: 0.75rem !important;
-            font-weight: 500 !important;
-            padding: 0.6rem 2rem !important;
-            transition: all 0.3s ease !important;
-            display: inline-block;
-        }
-        .shop-now-btn:hover {
-            background-color: #2D2D2D !important;
-            color: #FFFFFF !important;
-        }
-
-        /* Active styling for premium tabs selector */
-        .category-tab-active {
-            border-bottom: 2px solid #2D2D2D !important;
-            color: #2D2D2D !important;
-            font-weight: 500 !important;
-        }
-    </style>
 </head>
 <body>
 
-    <header class="sticky top-0 z-40 bg-[#F5EFEB]/80 backdrop-blur-md border-b border-stone-200/40">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <div class="flex flex-col">
-                <a href="#" class="text-3xl font-normal tracking-wide text-stone-800 leading-none">Art by Heart</a>
-                <span class="text-[10px] uppercase tracking-[0.2em] text-stone-400 mt-1 pl-0.5">Crochetique</span>
+    <header class="site-header">
+        <div class="header-container">
+            <div class="brand-identity">
+                <img src="logo.jpg" alt="Crochetique Logo" class="site-logo">
+                <div class="brand-text">
+                    <h1>Art By Heart</h1>
+                    <span class="tagline">Crochetique</span>
+                </div>
             </div>
             
-            <nav class="hidden md:flex items-center gap-8 text-xs font-medium uppercase tracking-widest text-stone-500">
-                <a href="#" class="hover:text-stone-900 transition-colors">Home</a>
-                <a href="#shop-grid-section" class="hover:text-stone-900 transition-colors">Shop Collection</a>
-                <a href="#our-story-section" class="hover:text-stone-900 transition-colors">Our Story</a>
-                <a href="#contact-section" class="hover:text-stone-900 transition-colors">Custom Orders</a>
-                <a href="#contact-section" class="hover:text-stone-900 transition-colors">Contact</a>
+            <nav class="main-nav">
+                <a href="#" class="nav-link active">Home</a>
+                <a href="#" class="nav-link">Shop Collection</a>
+                <a href="#" class="nav-link">Our Story</a>
+                <a href="#" class="nav-link">Custom Orders</a>
+                <a href="#" class="nav-link">Contact</a>
             </nav>
 
-            <div class="flex items-center gap-6">
-                <div class="relative hidden sm:block w-44 lg:w-56">
-                    <input type="text" id="searchBar" onkeyup="filterProducts()" placeholder="Search..." class="w-full px-4 py-1.5 border border-stone-200 rounded text-xs bg-white/50 focus:outline-none focus:border-stone-400">
+            <div class="header-controls">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                    <span class="search-icon">🔍</span>
                 </div>
-                <button onclick="toggleCart()" class="relative p-2 text-stone-700 hover:text-black focus:outline-none cursor-pointer bg-transparent border-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
-                    </svg>
-                    <span id="cartCount" class="absolute top-1.5 right-1.5 inline-flex items-center justify-center px-1.5 py-0.5 text-[10px] font-bold leading-none text-white transform translate-x-1/2 -translate-y-1/2 bg-stone-800 rounded-full">0</span>
-                </button>
             </div>
-        </div>
-        <div class="px-4 pb-3 sm:hidden">
-            <input type="text" id="searchBarMobile" onkeyup="filterProductsMobile()" placeholder="Search items..." class="w-full px-4 py-2 border border-stone-200 rounded text-xs bg-white focus:outline-none focus:border-stone-400">
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        
-        <div class="text-center max-w-3xl mx-auto mb-20 mt-6">
-            <h1 class="text-4xl md:text-5xl font-light mb-5 text-stone-800 tracking-tight leading-tight">Where art meets heart. Clean lines, soft textures, made entirely by hand.</h1>
-            <p class="text-stone-400 text-xs font-semibold uppercase tracking-[0.25em] mb-8">Premium Crochet Catalogue</p>
-            <a href="#shop-grid-section" class="inline-block text-xs font-medium uppercase tracking-widest bg-stone-800 hover:bg-stone-700 text-white px-8 py-3.5 rounded transition-colors shadow-sm">
-                Shop the Collection
-            </a>
+    <section class="hero-section">
+        <div class="hero-content">
+            <h2 class="hero-title">Where art meets heart. Clean lines, soft textures, made entirely by hand.</h2>
+            <p class="hero-subtitle">Crochetique descriptive tag</p>
+            <a href="#" class="btn-primary">Shop the Collection</a>
+        </div>
+    </section>
+
+    <section class="catalog-section">
+        <div class="section-title-container">
+            <h3 class="section-title">Product Catalog</h3>
         </div>
 
-        <section id="shop-grid-section" class="pt-10">
-            <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-3 mb-16 border-b border-stone-200 pb-4 text-xs uppercase tracking-wider text-stone-400 font-medium">
-                <button onclick="filterCategory('all')" id="tab-all" class="category-tab-active pb-3 cursor-pointer hover:text-stone-800 transition-all bg-transparent border-0">All Pieces</button>
-                <button onclick="filterCategory('wearables')" id="tab-wearables" class="pb-3 cursor-pointer hover:text-stone-800 transition-all bg-transparent border-0">Wearables</button>
-                <button onclick="filterCategory('flowers')" id="tab-flowers" class="pb-3 cursor-pointer hover:text-stone-800 transition-all bg-transparent border-0">Flowers</button>
-                <button onclick="filterCategory('keychains')" id="tab-keychains" class="pb-3 cursor-pointer hover:text-stone-800 transition-all bg-transparent border-0">Keychains</button>
-                <button onclick="filterCategory('gajray')" id="tab-gajray" class="pb-3 cursor-pointer hover:text-stone-800 transition-all bg-transparent border-0">Gajray</button>
-                <button onclick="triggerCustomBouquet()" class="pb-3 text-amber-700 font-semibold cursor-pointer hover:opacity-80 transition-all bg-transparent border-0">🌸 Make Your Own Bouquet</button>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=600" alt="Striped Handwarmers" class="product-image">
+                </div>
+                <h4 class="product-name">Striped Handwarmers</h4>
+                <p class="product-price">$13.00</p>
+                <button class="btn-shop-now">SHOP NOW</button>
             </div>
 
-            <div id="productsGrid" class="premium-grid-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-20 px-2">
-                
-                <div class="premium-3d-card card-tilt-left flex flex-col justify-between" data-name="stripped handwarmers" data-cat="wearables">
-                    <div>
-                        <div class="aspect-square w-full overflow-hidden rounded bg-stone-50 mb-5">
-                            <img src="images/Stripped handwarmers.jpeg" alt="Stripped handwarmers by Art by Heart" class="h-full w-full object-cover object-center">
-                        </div>
-                        <h3 class="text-lg font-normal text-stone-800 text-center mb-0.5">Stripped Handwarmers</h3>
-                        <p class="text-[11px] text-stone-500 font-medium text-center mb-1">PKR 1,199.00</p>
-                        <p class="text-[10px] text-stone-400 italic font-light text-center mb-5">Available in custom colors</p>
-                    </div>
-                    <div class="text-center pb-1">
-                        <button onclick="addToCart('Stripped Handwarmers', 1199.00)" class="shop-now-btn rounded-xs cursor-pointer bg-transparent">Shop Now</button>
-                    </div>
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?q=80&w=600" alt="Cat Paw Design Handwarmers" class="product-image">
                 </div>
-
-                <div class="premium-3d-card card-tilt-right flex flex-col justify-between" data-name="cat paw design handwarmers" data-cat="wearables">
-                    <div>
-                        <div class="aspect-square w-full overflow-hidden rounded bg-stone-50 mb-5">
-                            <img src="images/Cat Paw Design Handwarmers.jpeg" alt="Cat Paw Design Handwarmers by Art by Heart" class="h-full w-full object-cover object-center">
-                        </div>
-                        <h3 class="text-lg font-normal text-stone-800 text-center mb-0.5">Cat Paw Handwarmers</h3>
-                        <p class="text-[11px] text-stone-500 font-medium text-center mb-1">PKR 1,199.00</p>
-                        <p class="text-[10px] text-stone-400 italic font-light text-center mb-5">Available in custom colors</p>
-                    </div>
-                    <div class="text-center pb-1">
-                        <button onclick="addToCart('Cat Paw Handwarmers', 1199.00)" class="shop-now-btn rounded-xs cursor-pointer bg-transparent">Shop Now</button>
-                    </div>
-                </div>
-
-                <div class="premium-3d-card card-tilt-slight flex flex-col justify-between" data-name="slouchy beanie" data-cat="wearables">
-                    <div>
-                        <div class="aspect-square w-full overflow-hidden rounded bg-stone-50 mb-5">
-                            <img src="images/Slouchy Beanie.jpeg" alt="Slouchy Beanie by Art by Heart" class="h-full w-full object-cover object-center">
-                        </div>
-                        <h3 class="text-lg font-normal text-stone-800 text-center mb-0.5">Slouchy Beanie</h3>
-                        <p class="text-[11px] text-stone-500 font-medium text-center mb-1">PKR 1,499.00</p>
-                        <p class="text-[10px] text-stone-400 italic font-light text-center mb-5">Available in custom colors</p>
-                    </div>
-                    <div class="text-center pb-1">
-                        <button onclick="addToCart('Slouchy Beanie', 1499.00)" class="shop-now-btn rounded-xs cursor-pointer bg-transparent">Shop Now</button>
-                    </div>
-                </div>
-
-                <div class="premium-3d-card card-tilt-right flex flex-col justify-between" data-name="sunflower large" data-cat="flowers">
-                    <div>
-                        <div class="aspect-square w-full overflow-hidden rounded bg-stone-50 mb-5">
-                            <img src="images/Sunflower (large).jpeg" alt="Sunflower large by Art by Heart" class="h-full w-full object-cover object-center">
-                        </div>
-                        <h3 class="text-lg font-normal text-stone-800 text-center mb-0.5">Forever Sunflower</h3>
-                        <p class="text-[11px] text-stone-500 font-medium text-center mb-1">PKR 1,999.00</p>
-                        <p class="text-[10px] text-stone-400 italic font-light text-center mb-5">Available in custom colors</p>
-                    </div>
-                    <div class="text-center pb-1">
-                        <button onclick="addToCart('Forever Sunflower', 1999.00)" class="shop-now-btn rounded-xs cursor-pointer bg-transparent">Shop Now</button>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section id="our-story-section" class="mt-40 bg-white rounded-2xl p-8 md:p-16 shadow-sm border border-stone-200/40">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-7">
-                    <span class="text-[10px] uppercase tracking-[0.3em] font-semibold text-stone-400 block mb-3">Slow Craft Movement</span>
-                    <h2 class="text-3xl md:text-4xl font-light text-stone-800 mb-6 leading-tight">The Magic of Art by Heart</h2>
-                    <p class="text-stone-600 text-sm font-light leading-relaxed mb-6">
-                        Hey there! We are so glad you’re here. At <strong>Art by Heart</strong>, we believe that true art isn’t made by machines—it’s dreamed up in the mind and brought to life by human hands. Every single item in our <strong>Crochetique</strong> collection starts as a simple, humble skein of yarn.
-                    </p>
-                    <p class="text-stone-600 text-sm font-light leading-relaxed">
-                        With patience, time, and a whole lot of love, we loop and knot that yarn into something beautiful you can hold, wear, or gift. When you buy handmade, you aren't just buying a product; you are buying hours of dedication, a piece of a maker's creative journey, and a truly unique treasure built to last. That is the magic of slow craft!
-                    </p>
-                </div>
-                
-                <div class="lg:col-span-5 space-y-6 border-l border-stone-100 lg:pl-10">
-                    <div class="flex items-start gap-4">
-                        <div class="p-2.5 bg-red-50 text-red-700 rounded-full">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" /></svg>
-                        </div>
-                        <div>
-                            <h4 class="text-base font-medium text-stone-800">100% Heartmade</h4>
-                            <p class="text-xs text-stone-400 font-light mt-1">Every stitch carries warmth, patience, and genuine human care.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex items-start gap-4">
-                        <div class="p-2.5 bg-amber-50 text-amber-800 rounded-full">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 21l8.982-5.63M18 12V4.5A2.25 2.25 0 0 0 15.75 2.25H14M18 12v7.428c0 .845-.7 1.54-1.54 1.54h-1.648a1.54 1.54 0 0 1-1.54-1.54V12m4.728 0H13.27M13.27 12V4.5A2.25 2.25 0 0 0 11.02 2.25H9.27M13.27 12H8.543a1.54 1.54 0 0 0-1.54 1.54v6.038c0 .844.695 1.54 1.54 1.54h1.411c.618 0 1.178-.37 1.411-.941l.518-1.262" /></svg>
-                        </div>
-                        <div>
-                            <h4 class="text-base font-medium text-stone-800">Premium Fibers</h4>
-                            <p class="text-xs text-stone-400 font-light mt-1">Sourced soft yarns carefully chosen for long-term comfort and style.</p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start gap-4">
-                        <div class="p-2.5 bg-stone-100 text-stone-700 rounded-full">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m9-9H3" /></svg>
-                        </div>
-                        <div>
-                            <h4 class="text-base font-medium text-stone-800">Slow, Minimalist Fashion</h4>
-                            <p class="text-xs text-stone-400 font-light mt-1">Durable treasures engineered carefully against massive industrial waste.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="mt-40 text-center">
-            <span class="text-[10px] uppercase tracking-[0.3em] font-semibold text-stone-400 block mb-3">Workflow</span>
-            <h2 class="text-3xl font-light text-stone-800 mb-16">How Your Order Comes To Life</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-4xl mx-auto relative">
-                <div class="relative z-10 bg-[#F5EFEB] px-4">
-                    <div class="w-10 h-10 rounded-full bg-stone-800 text-white flex items-center justify-center font-semibold text-xs mx-auto mb-5 shadow-sm">1</div>
-                    <h4 class="text-lg font-medium text-stone-800 mb-2">Choose Your Design</h4>
-                    <p class="text-xs text-stone-500 font-light leading-relaxed">Select your favorite style from our Crochetique collection, or customize your own colors and sizes.</p>
-                </div>
-                
-                <div class="relative z-10 bg-[#F5EFEB] px-4">
-                    <div class="w-10 h-10 rounded-full bg-stone-800 text-white flex items-center justify-center font-semibold text-xs mx-auto mb-5 shadow-sm">2</div>
-                    <h4 class="text-lg font-medium text-stone-800 mb-2">Handcrafted with Care</h4>
-                    <p class="text-xs text-stone-500 font-light leading-relaxed">We sit down and carefully stitch your piece by hand, loop by loop, ensuring perfect premium quality.</p>
-                </div>
-                
-                <div class="relative z-10 bg-[#F5EFEB] px-4">
-                    <div class="w-10 h-10 rounded-full bg-stone-800 text-white flex items-center justify-center font-semibold text-xs mx-auto mb-5 shadow-sm">3</div>
-                    <h4 class="text-lg font-medium text-stone-800 mb-2">Packaged & Shipped</h4>
-                    <p class="text-xs text-stone-500 font-light leading-relaxed">Your finished product is neatly wrapped and shipped straight to your doorstep, ready to enjoy.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="mt-40 bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-stone-200/40">
-            <div class="text-center mb-16">
-                <span class="text-[10px] uppercase tracking-[0.3em] font-semibold text-stone-400 block mb-3">Customer Feedback</span>
-                <h2 class="text-3xl font-light text-stone-800 tracking-tight leading-tight">What Our Community Says</h2>
+                <h4 class="product-name">Cat Paw Design Handwarmers</h4>
+                <p class="product-price">$30.00</p>
+                <button class="btn-shop-now">SHOP NOW</button>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                
-                <div class="bg-[#F5EFEB]/40 border border-stone-200/60 rounded-xl p-6 flex flex-col justify-between transition-all hover:shadow-md hover:border-stone-300">
-                    <div>
-                        <div class="flex items-center gap-1 mb-4 text-amber-500/80">
-                            <span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span>
-                        </div>
-                        <p class="text-stone-600 text-xs font-light leading-relaxed mb-6">
-                            "Traditional jasmine gajras hamesha synthetic lagte thay, but these yarn gajras are so elegant and soft! Wore them to a family dholki and everyone kept asking where I got them."
-                        </p>
-                    </div>
-                    <div class="flex items-center gap-3 pt-4 border-t border-stone-200/60">
-                        <div class="w-9 h-9 rounded-full bg-stone-800 flex items-center justify-center text-xs font-medium text-stone-100">AK</div>
-                        <div>
-                            <h4 class="text-xs font-medium text-stone-800">Ayesha Khan</h4>
-                        </div>
-                    </div>
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="https://images.unsplash.com/photo-1575413824364-887be8877ca1?q=80&w=600" alt="Minimalist Beanie" class="product-image">
                 </div>
-
-                <div class="bg-[#F5EFEB]/40 border border-stone-200/60 rounded-xl p-6 flex flex-col justify-between transition-all hover:shadow-md hover:border-stone-300">
-                    <div>
-                        <div class="flex items-center gap-1 mb-4 text-amber-500/80">
-                            <span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span>
-                        </div>
-                        <p class="text-stone-600 text-xs font-light leading-relaxed mb-6">
-                            "Ordered the large forever sunflower as a birthday gift for my best friend. The stitching details are absolutely flawless! It’s the perfect everlasting aesthetic room decor."
-                        </p>
-                    </div>
-                    <div class="flex items-center gap-3 pt-4 border-t border-stone-200/60">
-                        <div class="w-9 h-9 rounded-full bg-stone-800 flex items-center justify-center text-xs font-medium text-stone-100">ZM</div>
-                        <div>
-                            <h4 class="text-xs font-medium text-stone-800">Zainab Malik</h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-[#F5EFEB]/40 border border-stone-200/60 rounded-xl p-6 flex flex-col justify-between transition-all hover:shadow-md hover:border-stone-300">
-                    <div>
-                        <div class="flex items-center gap-1 mb-4 text-amber-500/80">
-                            <span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span>
-                        </div>
-                        <p class="text-stone-600 text-xs font-light leading-relaxed mb-6">
-                            "Unbelievably cute and super warm to wear. The cat paw 3D pads look exactly like the reference layout pictures. Perfect minimalist cozy accessory for winters."
-                        </p>
-                    </div>
-                    <div class="flex items-center gap-3 pt-4 border-t border-stone-200/60">
-                        <div class="w-9 h-9 rounded-full bg-stone-800 flex items-center justify-center text-xs font-medium text-stone-100">SF</div>
-                        <div>
-                            <h4 class="text-xs font-medium text-stone-800">Sana Fatima</h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-[#F5EFEB]/40 border border-stone-200/60 rounded-xl p-6 flex flex-col justify-between transition-all hover:shadow-md hover:border-stone-300">
-                    <div>
-                        <div class="flex items-center gap-1 mb-4 text-amber-500/80">
-                            <span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span>
-                        </div>
-                        <p class="text-stone-600 text-xs font-light leading-relaxed mb-6">
-                            "The premium yarn texture is extremely comfortable and doesn't feel itchy at all. Fits beautifully with a nice modern slouchy drape. 10/10 crafting work!"
-                        </p>
-                    </div>
-                    <div class="flex items-center gap-3 pt-4 border-t border-stone-200/60">
-                        <div class="w-9 h-9 rounded-full bg-stone-800 flex items-center justify-center text-xs font-medium text-stone-100">HA</div>
-                        <div>
-                            <h4 class="text-xs font-medium text-stone-800">Hamza Ali</h4>
-                        </div>
-                    </div>
-                </div>
-
+                <h4 class="product-name">Minimalist Beanie</h4>
+                <p class="product-price">$20.00</p>
+                <button class="btn-shop-now">SHOP NOW</button>
             </div>
-        </section>
 
-        <section id="contact-section" class="mt-44 max-w-2xl mx-auto border-t border-stone-300/50 pt-24 text-center">
-            <h2 class="text-3xl font-light text-stone-800 mb-4">Request Custom Piece</h2>
-            <p class="text-sm text-stone-500 font-light mb-10 leading-relaxed">Have a custom request or want a specific design? Feel free to reach out to us directly for personalized orders and updates.</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="https://wa.me/923302588945" target="_blank" class="w-full sm:w-auto px-10 py-3.5 bg-stone-800 hover:bg-stone-700 text-white text-xs uppercase tracking-wider rounded-sm transition-colors font-medium text-center decoration-none">
-                    Chat on WhatsApp
-                </a>
-                <a href="#" class="w-full sm:w-auto px-10 py-3.5 border border-stone-300 hover:border-stone-800 text-stone-700 text-xs uppercase tracking-wider rounded-sm transition-colors font-medium text-center decoration-none">
-                    Follow on Instagram
-                </a>
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="https://images.unsplash.com/photo-1595155733331-f18027bc4352?q=80&w=600" alt="Forever Sunflower" class="product-image">
+                </div>
+                <h4 class="product-name">Forever Sunflower (large)</h4>
+                <p class="product-price">$20.00</p>
+                <button class="btn-shop-now">SHOP NOW</button>
             </div>
-        </section>
-    </main>
-
-    <div id="cartSidebar" class="cart-sidebar fixed inset-y-0 right-0 w-full sm:w-96 bg-white shadow-2xl z-50 translate-x-full flex flex-col">
-        <div class="p-6 border-b border-stone-100 flex items-center justify-between">
-            <h2 class="text-xl font-normal text-stone-800">Shopping Bag</h2>
-            <button onclick="toggleCart()" class="text-stone-400 hover:text-black cursor-pointer bg-transparent border-0">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                </svg>
-            </button>
         </div>
+    </section>
 
-        <div id="cartItems" class="flex-1 overflow-y-auto p-6 space-y-4">
-            <p id="emptyCartText" class="text-stone-400 text-sm text-center py-8">Your bag is empty.</p>
-        </div>
-
-        <div class="p-6 border-t border-stone-100 bg-stone-50">
-            <div class="flex justify-between text-base font-medium text-stone-900 mb-4">
-                <span>Subtotal</span>
-                <span id="cartSubtotal">PKR 0.00</span>
-            </div>
-            <p class="text-xs text-stone-400 mb-6">Shipping charges and order confirmations will be finalized via WhatsApp text.</p>
-            <button onclick="checkoutViaWhatsApp()" class="w-full text-center bg-stone-800 hover:bg-stone-700 text-white font-medium py-3.5 rounded-sm transition-colors tracking-wider uppercase text-xs cursor-pointer border-0">
-                Order via WhatsApp
-            </button>
-        </div>
-    </div>
-
-    <div id="cartOverlay" onclick="toggleCart()" class="fixed inset-0 bg-black/20 z-40 hidden backdrop-blur-xs"></div>
-
-    <footer class="bg-[#F5EFEB] border-t border-stone-200 py-12 text-center text-xs text-stone-400 font-light tracking-wide">
-        <div class="mb-4 text-[16px] text-stone-300 tracking-widest font-normal">🔒 Cash on Delivery Available Across Pakistan</div>
-        <p>&copy; 2026 Art by Heart. All Rights Reserved.</p>
-    </footer>
-
-    <script>
-        let cart = [];
-
-        function toggleCart() {
-            const sidebar = document.getElementById('cartSidebar');
-            const overlay = document.getElementById('cartOverlay');
-            sidebar.classList.toggle('translate-x-full');
-            overlay.classList.toggle('hidden');
-        }
-
-        function addToCart(name, price) {
-            const existingItem = cart.find(item => item.name === name);
-            if (existingItem) {
-                existingItem.quantity += 1;
-            } else {
-                cart.push({ name, price, quantity: 1 });
-            }
-            updateCartUI();
-            toggleCart();
-        }
-
-        function updateQuantity(name, amount) {
-            const item = cart.find(item => item.name === name);
-            if (item) {
-                item.quantity += amount;
-                if (item.quantity <= 0) {
-                    cart = cart.filter(i => i.name !== name);
-                }
-            }
-            updateCartUI();
-        }
-
-        function updateCartUI() {
-            const cartItemsContainer = document.getElementById('cartItems');
-            const emptyText = document.getElementById('emptyCartText');
-            const countBadge = document.getElementById('cartCount');
-            const subtotalText = document.getElementById('cartSubtotal');
-            
-            cartItemsContainer.innerHTML = '';
-            let totalItems = 0;
-            let subtotal = 0;
-
-            if (cart.length === 0) {
-                cartItemsContainer.appendChild(emptyText);
-                emptyText.classList.remove('hidden');
-            } else {
-                emptyText.classList.add('hidden');
-                cart.forEach(item => {
-                    totalItems += item.quantity;
-                    subtotal += (item.price * item.quantity);
-
-                    const itemElement = document.createElement('div');
-                    itemElement.className = 'flex items-center justify-between border-b border-stone-100 pb-4';
-                    itemElement.innerHTML = `
-                        <div>
-                            <h4 class="text-sm font-medium text-stone-800">${item.name}</h4>
-                            <p class="text-xs text-stone-400">PKR ${item.price.toLocaleString()}.00</p>
-                        </div>
-                        <div class="flex items-center gap-2 bg-stone-100 px-2.5 py-1 rounded">
-                            <button onclick="updateQuantity('${item.name}', -1)" class="text-sm px-1 font-bold text-stone-500 hover:text-black cursor-pointer bg-transparent border-0">-</button>
-                            <span class="text-xs font-medium w-4 text-center">${item.quantity}</span>
-                            <button onclick="updateQuantity('${item.name}', 1)" class="text-sm px-1 font-bold text-stone-500 hover:text-black cursor-pointer bg-transparent border-0">+</button>
-                        </div>
-                    `;
-                    cartItemsContainer.appendChild(itemElement);
-                });
-            }
-
-            countBadge.innerText = totalItems;
-            subtotalText.innerText = `PKR ${subtotal.toLocaleString()}.00`;
-        }
-
-        function checkoutViaWhatsApp() {
-            if (cart.length === 0) {
-                alert("Your basket is empty. Add items before placing an order!");
-                return;
-            }
-
-            let phoneNumber = "923302588945";
-            let message = "Hi Art by Heart! 🌸 I would like to order the following items:\n\n";
-            let subtotal = 0;
-
-            cart.forEach((item, index) => {
-                let itemTotal = item.price * item.quantity;
-                subtotal += itemTotal;
-                message += `${index + 1}. *${item.name}* (x${item.quantity}) - PKR ${itemTotal.toLocaleString()}.00\n`;
-            });
-
-            message += `\n*Total Cart Amount:* PKR ${subtotal.toLocaleString()}.00\n\nPlease guide me regarding delivery parameters! Thank you.`;
-            let encodedMessage = encodeURIComponent(message);
-            window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
-        }
-
-        function filterCategory(cat) {
-            const tabs = ['all', 'wearables', 'flowers', 'keychains', 'gajray'];
-            tabs.forEach(t => {
-                const el = document.getElementById(`tab-${t}`);
-                if(el) {
-                    if(t === cat) el.className = "category-tab-active pb-3 cursor-pointer text-stone-800 transition-all bg-transparent border-0";
-                    else el.className = "pb-3 cursor-pointer hover:text-stone-800 transition-all bg-transparent border-0";
-                }
-            });
-
-            const cards = document.querySelectorAll('.premium-3d-card');
-            cards.forEach(card => {
-                const cardCat = card.getAttribute('data-cat');
-                if (cat === 'all' || cardCat === cat) {
-                    card.style.display = "flex";
-                } else {
-                    card.style.display = "none";
-                }
-            });
-        }
-
-        function triggerCustomBouquet() {
-            let phoneNumber = "923302588945";
-            let message = "Hi Art by Heart! 🌸 I am interested in building a custom Crochet Bouquet. Please share the available flower variations and options with me!";
-            window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
-        }
-
-        function filterProducts() {
-            const query = document.getElementById('searchBar').value.toLowerCase();
-            const cards = document.querySelectorAll('.premium-3d-card');
-            cards.forEach(card => {
-                const productName = card.getAttribute('data-name');
-                if (productName.includes(query)) card.style.display = "flex";
-                else card.style.display = "none";
-            });
-        }
-
-        function filterProductsMobile() {
-            const query = document.getElementById('searchBarMobile').value.toLowerCase();
-            const cards = document.querySelectorAll('.premium-3d-card');
-            cards.forEach(card => {
-                const productName = card.getAttribute('data-name');
-                if (productName.includes(query)) card.style.display = "flex";
-                else card.style.display = "none";
-            });
-        }
-    </script>
 </body>
 </html>
