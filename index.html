@@ -3,328 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Art by Heart - Crochetique</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
+    <title>Art by Heart</title>
     <style>
-        /* CSS Reset & Variables */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-        :root {
-            --bg-color: #f7f3ed;
-            --text-dark: #2c2523;
-            --text-muted: #706461;
-            --accent-pink: #d49a97;
-            --font-serif: 'Playfair Display', serif;
-            --font-sans: 'Plus Jakarta Sans', sans-serif;
+            font-family: 'Playfair Display', serif;
         }
 
         body {
-            font-family: var(--font-sans);
-            background-color: var(--bg-color);
-            color: var(--text-dark);
-            line-height: 1.6;
+            background-color: #f5efe6;
+            color: #333;
+            text-align: center;
         }
 
-        /* Header & Navigation */
         header {
-            width: 100%;
-            background-color: var(--bg-color);
-            padding: 20px 4%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            padding: 20px 50px;
+            background-color: #f5efe6;
         }
 
-        .logo-container {
+        .logo-section {
             display: flex;
             align-items: center;
-            text-decoration: none;
-            gap: 12px;
+            gap: 15px;
         }
 
-        .logo-container img {
-            width: 55px;
-            height: 55px;
+        /* Logo image styling matching your exact layout */
+        .logo-section img {
+            width: 60px;
+            height: 60px;
             object-fit: contain;
-            border-radius: 50%;
-        }
-
-        .logo-text {
-            display: flex;
-            flex-direction: column;
         }
 
         .logo-text h1 {
-            font-family: var(--font-serif);
-            font-size: 22px;
-            color: var(--text-dark);
-            font-weight: 600;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
         }
 
-        .logo-text span {
-            font-size: 11px;
+        .logo-text p {
+            font-size: 12px;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: var(--text-muted);
-        }
-
-        nav {
-            display: flex;
-            gap: 30px;
+            color: #777;
         }
 
         nav a {
+            margin: 0 15px;
             text-decoration: none;
-            color: var(--text-dark);
+            color: #333;
             font-size: 14px;
-            font-weight: 500;
-            transition: color 0.3s;
         }
 
-        nav a:hover {
-            color: var(--accent-pink);
-        }
-
-        .header-right {
+        .search-cart {
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 15px;
         }
 
-        .search-bar {
-            padding: 8px 16px;
-            border: 1px solid #e3ded7;
-            background-color: #fff;
+        .search-box {
+            padding: 5px 10px;
+            border: 1px solid #ccc;
             border-radius: 4px;
-            font-size: 13px;
-            outline: none;
-            width: 180px;
+            background-color: #fff;
         }
 
-        .cart-icon {
-            position: relative;
-            cursor: pointer;
-        }
-
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 80px 6% 60px 6%;
-            max-width: 900px;
+        .hero-section {
+            padding: 80px 20px;
+            max-width: 800px;
             margin: 0 auto;
         }
 
-        .hero h2 {
-            font-family: var(--font-serif);
-            font-size: 46px;
-            font-weight: 400;
-            line-height: 1.25;
-            margin-bottom: 15px;
+        .hero-section h2 {
+            font-size: 36px;
+            font-weight: normal;
+            line-height: 1.5;
+            margin-bottom: 20px;
         }
 
-        .hero p {
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: var(--text-muted);
+        .hero-section p {
+            font-size: 14px;
+            color: #666;
             margin-bottom: 30px;
         }
 
-        .btn-primary {
-            display: inline-block;
-            background-color: var(--text-dark);
-            color: #fff;
-            padding: 14px 32px;
+        .shop-btn {
+            background-color: #2b2523;
+            color: white;
+            padding: 12px 30px;
             text-decoration: none;
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: 1px;
+            font-size: 14px;
             text-transform: uppercase;
             border-radius: 4px;
-            transition: background-color 0.3s;
+            display: inline-block;
         }
 
-        .btn-primary:hover {
-            background-color: var(--accent-pink);
-        }
-
-        /* Product Catalog & Tabs */
-        .catalog-section {
-            padding: 40px 4%;
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .catalog-section h3 {
-            font-family: var(--font-serif);
+        .catalog-title {
             font-size: 28px;
-            margin-bottom: 25px;
+            margin-top: 40px;
+            margin-bottom: 20px;
         }
 
         .tabs {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-bottom: 40px;
-            border-bottom: 1px solid #e3ded7;
-            padding-bottom: 10px;
+            margin-bottom: 30px;
         }
 
-        .tab-item {
-            font-size: 14px;
-            color: var(--text-muted);
+        .tab {
+            margin: 0 15px;
             cursor: pointer;
-            text-decoration: none;
-            padding-bottom: 10px;
-            position: relative;
+            font-size: 16px;
+            color: #777;
+            padding-bottom: 5px;
         }
 
-        .tab-item.active {
-            color: var(--text-dark);
-            font-weight: 600;
-        }
-
-        .tab-item.active::after {
-            content: '';
-            position: absolute;
-            bottom: -11px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: var(--text-dark);
-        }
-
-        /* Grid System */
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        .product-card {
-            background: transparent;
-            text-align: left;
-        }
-
-        .product-image-wrapper {
-            width: 100%;
-            aspect-ratio: 1 / 1;
-            background-color: #eae5de;
-            border-radius: 8px;
-            overflow: hidden;
-            margin-bottom: 15px;
-        }
-
-        .product-image-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-
-        .product-card:hover .product-image-wrapper img {
-            transform: scale(1.05);
-        }
-
-        .product-title {
-            font-size: 15px;
-            font-weight: 500;
-            margin-bottom: 8px;
-            color: var(--text-dark);
-        }
-
-        .btn-shop-now {
-            display: inline-block;
-            background-color: var(--text-dark);
-            color: #fff;
-            padding: 8px 16px;
-            text-decoration: none;
-            font-size: 11px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-radius: 4px;
-        }
-
-        /* Core Selling Points Section */
-        .selling-points {
-            background-color: #f2ede6;
-            padding: 60px 4%;
-            text-align: center;
-            margin-top: 80px;
-        }
-
-        .selling-points h4 {
-            font-family: var(--font-serif);
-            font-size: 24px;
-            margin-bottom: 40px;
-        }
-
-        .points-grid {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            flex-wrap: wrap;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .point-item {
-            flex: 1;
-            min-width: 150px;
-            max-width: 200px;
-            font-size: 13px;
-            color: var(--text-dark);
-        }
-
-        .point-icon {
-            font-size: 24px;
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        /* Responsive Breakpoints */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                gap: 15px;
-                padding: 15px;
-            }
-            nav {
-                gap: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            .hero h2 {
-                font-size: 32px;
-            }
-            .points-grid {
-                gap: 30px;
-            }
+        .tab.active {
+            color: #000;
+            border-bottom: 2px solid #000;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <a href="#" class="logo-container">
+        <div class="logo-section">
             <img src="images/artby heart logo.jpg" alt="Art by Heart Logo">
             <div class="logo-text">
                 <h1>Art By Heart</h1>
-                <span>Crochetique</span>
+                <p>Crochetique</p>
             </div>
-        </a>
-
+        </div>
         <nav>
             <a href="#">Home</a>
             <a href="#">Shop Collection</a>
@@ -332,97 +144,23 @@
             <a href="#">Custom Orders</a>
             <a href="#">Contact</a>
         </nav>
-
-        <div class="header-right">
-            <input type="text" class="search-bar" placeholder="Search...">
-            <div class="cart-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <path d="M16 10a4 4 0 0 1-8 0"></path>
-                </svg>
-            </div>
+        <div class="search-cart">
+            <input type="text" class="search-box" placeholder="Search...">
+            <span>🛒</span>
         </div>
     </header>
 
-    <section class="hero">
+    <div class="hero-section">
         <h2>Where art meets heart. Clean lines, soft textures, made entirely by hand.</h2>
         <p>Crochetique descriptive tag</p>
-        <a href="#" class="btn-primary">Shop the Collection</a>
-    </section>
+        <a href="#shop-grid-section" class="shop-btn">Shop The Collection</a>
+    </div>
 
-    <section class="catalog-section">
-        <h3>Product Catalog</h3>
-        
-        <div class="tabs">
-            <span class="tab-item active">All Pieces</span>
-            <span class="tab-item">Wearables</span>
-        </div>
-
-        <div class="product-grid">
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <img src="images/beanie.jpg" alt="Minimalist Beanie">
-                </div>
-                <div class="product-title">Minimalist Beanie</div>
-                <a href="#" class="btn-shop-now">Shop Now</a>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <img src="images/handwarmers.jpg" alt="Cat Paw Design Handwarmers">
-                </div>
-                <div class="product-title">Cat Paw Design Handwarmers</div>
-                <a href="#" class="btn-shop-now">Shop Now</a>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <img src="images/wristlets.jpg" alt="Traditional Gajray Floral Wristlets">
-                </div>
-                <div class="product-title">Traditional Gajray Floral Wristlets</div>
-                <a href="#" class="btn-shop-now">Shop Now</a>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <img src="images/bouquet.jpg" alt="Make Your Own Bouquet">
-                </div>
-                <div class="product-title">Make Your Own Bouquet</div>
-                <a href="#" class="btn-shop-now">Shop Now</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="selling-points">
-        <h4>Core Selling Points</h4>
-        <div class="points-grid">
-            <div class="point-item">
-                <span class="point-icon">❤️</span>
-                <p>1: Heart</p>
-            </div>
-            <div class="point-item">
-                <span class="point-icon">🧶</span>
-                <p>2: Yarn</p>
-            </div>
-            <div class="point-item">
-                <span class="point-icon">🌿</span>
-                <p>3: Leaf/ID</p>
-            </div>
-            <div class="point-item">
-                <span class="point-icon">🔄</span>
-                <p>Raw yarn</p>
-            </div>
-            <div class="point-item">
-                <span class="point-icon">🪡</span>
-                <p>Hand-stitching</p>
-            </div>
-            <div class="point-item">
-                <span class="point-icon">📦</span>
-                <p>Packaged & shipped</p>
-            </div>
-        </div>
-    </section>
+    <h3 class="catalog-title">Product Catalog</h3>
+    <div class="tabs">
+        <span class="tab active">All Pieces</span>
+        <span class="tab">Wearables</span>
+    </div>
 
 </body>
 </html>
