@@ -3,374 +3,426 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Art by Heart | Premium Handmade Crochet Store Pakistan</title>
-    <meta name="description" content="Discover premium, handmade soft and comfortable crochet items at Art by Heart Pakistan. Shop our aesthetic handwarmers, slouchy beanies, and forever sunflowers crafted with love.">
-    <meta name="keywords" content="Art by Heart, Crochet Pakistan, Handmade Crochet, Crochet Handwarmers, Slouchy Beanie, Crochet Sunflower, Custom Crochet Gifts, Crochetique">
-    <meta name="author" content="Art by Heart">
-    <meta name="robots" content="index, follow">
-
-    <meta property="og:title" content="Art by Heart | Premium Handmade Crochet Store">
-    <meta property="og:description" content="Beautifully crafted, soft, warm, and comfortable crochet accessories and decor made with love in Pakistan.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://artbyheart00.github.io/">
-    <meta property="og:image" content="images/Sunflower (large).jpeg">
-
+    <title>Art by Heart - Crochetique</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     
-    <script src="https://cdn.tailwindcss.com"></script>
-
     <style>
+        /* CSS Reset & Variables */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root {
+            --bg-color: #f7f3ed;
+            --text-dark: #2c2523;
+            --text-muted: #706461;
+            --accent-pink: #d49a97;
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Plus Jakarta Sans', sans-serif;
+        }
+
         body {
-            font-family: 'Plus Jakarta Sans', sans-serif !important;
-            /* Premium Textured Linen Effect combined with Brand Colors */
-            background-color: #FFFFFF !important; 
-            background-image: 
-                radial-gradient(rgba(188, 133, 138, 0.04) 1px, transparent 0),
-                radial-gradient(rgba(188, 133, 138, 0.04) 1px, transparent 0);
-            background-size: 8px 8px;
-            background-position: 0 0, 4px 4px;
-            background-attachment: fixed;
-            color: #2D2D2D !important;
-            overflow-x: hidden;
-        }
-        h1, h2, h3, h4 {
-            font-family: 'Playfair Display', serif !important;
-        }
-        .cart-sidebar {
-            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
-        }
-        
-        /* Fixed: Strict Flat Proportions mimicking your updated design perfectly on mobile */
-        .premium-3d-card {
-            background-color: #FFFFFF !important;
-            border-radius: 12px !important;
-            padding: 18px !important;
-            box-shadow: 0 4px 20px rgba(188, 133, 138, 0.05) !important;
-            border: 1px solid rgba(188, 133, 138, 0.1);
-            overflow: hidden;
-            transition: box-shadow 0.4s ease, border-color 0.4s ease !important;
+            font-family: var(--font-sans);
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            line-height: 1.6;
         }
 
-        .premium-3d-card:hover {
-            box-shadow: 0 12px 30px rgba(188, 133, 138, 0.12) !important;
-            border-color: rgba(188, 133, 138, 0.3);
-        }
-
-        /* Fixed: Beautiful stable crop zoom for both Mobile & Desktop (No 3D distortion) */
-        .premium-image-wrapper {
+        /* Header & Navigation */
+        header {
             width: 100%;
-            overflow: hidden;
-            border-radius: 6px;
-        }
-        .premium-image-wrapper img {
-            transition: transform 0.6s cubic-bezier(0.25, 1, 0.33, 1) !important;
-        }
-        .premium-3d-card:hover .premium-image-wrapper img {
-            transform: scale(1.07);
+            background-color: var(--bg-color);
+            padding: 20px 4%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
-        /* Sharp Brand Theme Minimalist Buttons matching the Reference */
-        .shop-now-btn {
-            border: 1px solid #bc858a !important;
-            color: #bc858a !important;
-            text-transform: uppercase !important;
-            letter-spacing: 0.1em !important;
-            font-size: 0.75rem !important;
-            font-weight: 600 !important;
-            padding: 0.6rem 2rem !important;
-            transition: all 0.3s ease !important;
+        .logo-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            gap: 12px;
+        }
+
+        .logo-container img {
+            width: 55px;
+            height: 55px;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-text h1 {
+            font-family: var(--font-serif);
+            font-size: 22px;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .logo-text span {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-pink);
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .search-bar {
+            padding: 8px 16px;
+            border: 1px solid #e3ded7;
+            background-color: #fff;
+            border-radius: 4px;
+            font-size: 13px;
+            outline: none;
+            width: 180px;
+        }
+
+        .cart-icon {
+            position: relative;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 6% 60px 6%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h2 {
+            font-family: var(--font-serif);
+            font-size: 46px;
+            font-weight: 400;
+            line-height: 1.25;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .btn-primary {
             display: inline-block;
-        }
-        .shop-now-btn:hover {
-            background-color: #bc858a !important;
-            color: #FFFFFF !important;
+            background-color: var(--text-dark);
+            color: #fff;
+            padding: 14px 32px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 4px;
+            transition: background-color 0.3s;
         }
 
-        /* Active Brand Color under selected category tabs */
-        .category-tab-active {
-            border-bottom: 2px solid #bc858a !important;
-            color: #bc858a !important;
-            font-weight: 500 !important;
+        .btn-primary:hover {
+            background-color: var(--accent-pink);
+        }
+
+        /* Product Catalog & Tabs */
+        .catalog-section {
+            padding: 40px 4%;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .catalog-section h3 {
+            font-family: var(--font-serif);
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #e3ded7;
+            padding-bottom: 10px;
+        }
+
+        .tab-item {
+            font-size: 14px;
+            color: var(--text-muted);
+            cursor: pointer;
+            text-decoration: none;
+            padding-bottom: 10px;
+            position: relative;
+        }
+
+        .tab-item.active {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .tab-item.active::after {
+            content: '';
+            position: absolute;
+            bottom: -11px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--text-dark);
+        }
+
+        /* Grid System */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: transparent;
+            text-align: left;
+        }
+
+        .product-image-wrapper {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            background-color: #eae5de;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .product-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .product-card:hover .product-image-wrapper img {
+            transform: scale(1.05);
+        }
+
+        .product-title {
+            font-size: 15px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+
+        .btn-shop-now {
+            display: inline-block;
+            background-color: var(--text-dark);
+            color: #fff;
+            padding: 8px 16px;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 4px;
+        }
+
+        /* Core Selling Points Section */
+        .selling-points {
+            background-color: #f2ede6;
+            padding: 60px 4%;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .selling-points h4 {
+            font-family: var(--font-serif);
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+
+        .points-grid {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .point-item {
+            flex: 1;
+            min-width: 150px;
+            max-width: 200px;
+            font-size: 13px;
+            color: var(--text-dark);
+        }
+
+        .point-icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px;
+            }
+            nav {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .hero h2 {
+                font-size: 32px;
+            }
+            .points-grid {
+                gap: 30px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <header class="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-stone-200/40">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <img src="image_cb7ccd.jpg" alt="Art by Heart Logo" class="w-12 h-12 rounded-full object-contain border border-stone-100">
-                <div class="flex flex-col">
-                    <a href="#" class="text-2xl font-normal tracking-wide text-[#bc858a] leading-none">Art by Heart</a>
-                    <span class="text-[10px] uppercase tracking-[0.2em] text-stone-400 mt-1 pl-0.5">Crochetique</span>
-                </div>
+    <header>
+        <a href="#" class="logo-container">
+            <img src="images/artby heart logo.jpg" alt="Art by Heart Logo">
+            <div class="logo-text">
+                <h1>Art By Heart</h1>
+                <span>Crochetique</span>
             </div>
-            
-            <nav class="hidden md:flex items-center gap-8 text-xs font-medium uppercase tracking-widest text-stone-500">
-                <a href="#" class="text-[#bc858a] hover:text-[#bc858a] transition-colors">Home</a>
-                <a href="#shop-grid-section" class="hover:text-[#bc858a] transition-colors">Shop Collection</a>
-                <a href="#our-story-section" class="hover:text-[#bc858a] transition-colors">Our Story</a>
-                <a href="#contact-section" class="hover:text-[#bc858a] transition-colors">Custom Orders</a>
-                <a href="#contact-section" class="hover:text-[#bc858a] transition-colors">Contact</a>
-            </nav>
+        </a>
 
-            <div class="flex items-center gap-6">
-                <div class="relative hidden sm:block w-44 lg:w-56">
-                    <input type="text" id="searchBar" onkeyup="filterProducts()" placeholder="Search..." class="w-full px-4 py-1.5 border border-stone-200 rounded text-xs bg-white/50 focus:outline-none focus:border-[#bc858a]">
-                </div>
-                <button onclick="toggleCart()" class="relative p-2 text-stone-700 hover:text-[#bc858a] focus:outline-none cursor-pointer bg-transparent border-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
-                    </svg>
-                    <span id="cartCount" class="absolute top-1.5 right-1.5 inline-flex items-center justify-center px-1.5 py-0.5 text-[10px] font-bold leading-none text-white transform translate-x-1/2 -translate-y-1/2 bg-[#bc858a] rounded-full">0</span>
-                </button>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Shop Collection</a>
+            <a href="#">Our Story</a>
+            <a href="#">Custom Orders</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <div class="header-right">
+            <input type="text" class="search-bar" placeholder="Search...">
+            <div class="cart-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
             </div>
-        </div>
-        <div class="px-4 pb-3 sm:hidden">
-            <input type="text" id="searchBarMobile" onkeyup="filterProductsMobile()" placeholder="Search items..." class="w-full px-4 py-2 border border-stone-200 rounded text-xs bg-white focus:outline-none focus:border-[#bc858a]">
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <section class="hero">
+        <h2>Where art meets heart. Clean lines, soft textures, made entirely by hand.</h2>
+        <p>Crochetique descriptive tag</p>
+        <a href="#" class="btn-primary">Shop the Collection</a>
+    </section>
+
+    <section class="catalog-section">
+        <h3>Product Catalog</h3>
         
-        <div class="text-center max-w-3xl mx-auto mb-20 mt-6">
-            <h1 class="text-4xl md:text-5xl font-light mb-5 text-stone-800 tracking-tight leading-tight">Where art meets heart. Clean lines, soft textures, made entirely by hand.</h1>
-            <p class="text-[#bc858a] text-xs font-semibold uppercase tracking-[0.25em] mb-8">Premium Crochet Catalogue</p>
-            <a href="#shop-grid-section" class="inline-block text-xs font-medium uppercase tracking-widest bg-[#bc858a] hover:bg-[#a36f73] text-white px-8 py-3.5 rounded transition-colors shadow-sm">
-                Shop the Collection
-            </a>
+        <div class="tabs">
+            <span class="tab-item active">All Pieces</span>
+            <span class="tab-item">Wearables</span>
         </div>
 
-        <section id="shop-grid-section" class="pt-10">
-            <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-3 mb-16 border-b border-stone-200 pb-4 text-xs uppercase tracking-wider text-stone-400 font-medium">
-                <button onclick="filterCategory('all')" id="tab-all" class="category-tab-active pb-3 cursor-pointer hover:text-[#bc858a] transition-all bg-transparent border-0">All Pieces</button>
-                <button onclick="filterCategory('wearables')" id="tab-wearables" class="pb-3 cursor-pointer hover:text-[#bc858a] transition-all bg-transparent border-0">Wearables</button>
-                <button onclick="filterCategory('flowers')" id="tab-flowers" class="pb-3 cursor-pointer hover:text-[#bc858a] transition-all bg-transparent border-0">Flowers</button>
-                <button onclick="filterCategory('keychains')" id="tab-keychains" class="pb-3 cursor-pointer hover:text-[#bc858a] transition-all bg-transparent border-0">Keychains</button>
-                <button onclick="filterCategory('gajray')" id="tab-gajray" class="pb-3 cursor-pointer hover:text-[#bc858a] transition-all bg-transparent border-0">Gajray</button>
-                <button onclick="triggerCustomBouquet()" class="pb-3 text-amber-700 font-semibold cursor-pointer hover:opacity-80 transition-all bg-transparent border-0">🌸 Make Your Own Bouquet</button>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="images/beanie.jpg" alt="Minimalist Beanie">
+                </div>
+                <div class="product-title">Minimalist Beanie</div>
+                <a href="#" class="btn-shop-now">Shop Now</a>
             </div>
 
-            <div id="productsGrid" class="grid grid-cols-2 lg:grid-cols-4 gap-x-4 md:gap-x-8 gap-y-16 px-2">
-                
-                <div class="premium-3d-card flex flex-col justify-between" data-name="stripped handwarmers" data-cat="wearables">
-                    <div>
-                        <div class="premium-image-wrapper aspect-square mb-5 bg-stone-50">
-                            <img src="images/Stripped handwarmers.jpeg" alt="Stripped handwarmers by Art by Heart" class="h-full w-full object-cover object-center">
-                        </div>
-                        <h3 class="text-base md:text-lg font-normal text-stone-800 text-center mb-0.5">Stripped Handwarmers</h3>
-                        <p class="text-[11px] text-stone-500 font-medium text-center mb-1">PKR 1,199.00</p>
-                        <p class="text-[10px] text-stone-400 italic font-light text-center mb-5">Available in custom colors</p>
-                    </div>
-                    <div class="text-center pb-1">
-                        <button onclick="addToCart('Stripped Handwarmers', 1199.00)" class="shop-now-btn rounded-xs cursor-pointer bg-transparent">Shop Now</button>
-                    </div>
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="images/handwarmers.jpg" alt="Cat Paw Design Handwarmers">
                 </div>
-
-                <div class="premium-3d-card flex flex-col justify-between" data-name="cat paw design handwarmers" data-cat="wearables">
-                    <div>
-                        <div class="premium-image-wrapper aspect-square mb-5 bg-stone-50">
-                            <img src="images/Cat Paw Design Handwarmers.jpeg" alt="Cat Paw Design Handwarmers by Art by Heart" class="h-full w-full object-cover object-center">
-                        </div>
-                        <h3 class="text-base md:text-lg font-normal text-stone-800 text-center mb-0.5">Cat Paw Handwarmers</h3>
-                        <p class="text-[11px] text-stone-500 font-medium text-center mb-1">PKR 1,199.00</p>
-                        <p class="text-[10px] text-stone-400 italic font-light text-center mb-5">Available in custom colors</p>
-                    </div>
-                    <div class="text-center pb-1">
-                        <button onclick="addToCart('Cat Paw Handwarmers', 1199.00)" class="shop-now-btn rounded-xs cursor-pointer bg-transparent">Shop Now</button>
-                    </div>
-                </div>
-
-                <div class="premium-3d-card flex flex-col justify-between" data-name="slouchy beanie" data-cat="wearables">
-                    <div>
-                        <div class="premium-image-wrapper aspect-square mb-5 bg-stone-50">
-                            <img src="images/Slouchy Beanie.jpeg" alt="Slouchy Beanie by Art by Heart" class="h-full w-full object-cover object-center">
-                        </div>
-                        <h3 class="text-base md:text-lg font-normal text-stone-800 text-center mb-0.5">Slouchy Beanie</h3>
-                        <p class="text-[11px] text-stone-500 font-medium text-center mb-1">PKR 1,499.00</p>
-                        <p class="text-[10px] text-stone-400 italic font-light text-center mb-5">Available in custom colors</p>
-                    </div>
-                    <div class="text-center pb-1">
-                        <button onclick="addToCart('Slouchy Beanie', 1499.00)" class="shop-now-btn rounded-xs cursor-pointer bg-transparent">Shop Now</button>
-                    </div>
-                </div>
-
-                <div class="premium-3d-card flex flex-col justify-between" data-name="sunflower large" data-cat="flowers">
-                    <div>
-                        <div class="premium-image-wrapper aspect-square mb-5 bg-stone-50">
-                            <img src="images/Sunflower (large).jpeg" alt="Sunflower large by Art by Heart" class="h-full w-full object-cover object-center">
-                        </div>
-                        <h3 class="text-base md:text-lg font-normal text-stone-800 text-center mb-0.5">Forever Sunflower</h3>
-                        <p class="text-[11px] text-stone-500 font-medium text-center mb-1">PKR 1,999.00</p>
-                        <p class="text-[10px] text-stone-400 italic font-light text-center mb-5">Available in custom colors</p>
-                    </div>
-                    <div class="text-center pb-1">
-                        <button onclick="addToCart('Forever Sunflower', 1999.00)" class="shop-now-btn rounded-xs cursor-pointer bg-transparent">Shop Now</button>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section id="our-story-section" class="mt-40 bg-white rounded-2xl p-8 md:p-16 shadow-sm border border-stone-200/40">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-7">
-                    <span class="text-[10px] uppercase tracking-[0.3em] font-semibold text-[#bc858a] block mb-3">Slow Craft Movement</span>
-                    <h2 class="text-3xl md:text-4xl font-light text-stone-800 mb-6 leading-tight">The Magic of Art by Heart</h2>
-                    <p class="text-stone-600 text-sm font-light leading-relaxed mb-6">
-                        Hey there! We are so glad you’re here. At <strong>Art by Heart</strong>, we believe that true art isn’t made by machines—it’s dreamed up in the mind and brought to life by human hands. Every single item in our <strong>Crochetique</strong> collection starts as a simple, humble skein of yarn.
-                    </p>
-                    <p class="text-stone-600 text-sm font-light leading-relaxed">
-                        With patience, time, and a whole lot of love, we loop and knot that yarn into something beautiful you can hold, wear, or gift. When you buy handmade, you aren't just buying a product; you are buying hours of dedication, a piece of a maker's creative journey, and a truly unique treasure built to last. That is the magic of slow craft!
-                    </p>
-                </div>
-                
-                <div class="lg:col-span-5 space-y-6 border-l border-stone-100 lg:pl-10">
-                    <div class="flex items-start gap-4">
-                        <div class="p-2.5 bg-red-50 text-[#bc858a] rounded-full">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" /></svg>
-                        </div>
-                        <div>
-                            <h4 class="text-base font-medium text-stone-800">100% Heartmade</h4>
-                            <p class="text-xs text-stone-400 font-light mt-1">Every stitch carries warmth, patience, and genuine human care.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex items-start gap-4">
-                        <div class="p-2.5 bg-amber-50 text-amber-800 rounded-full">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 21l8.982-5.63M18 12V4.5A2.25 2.25 0 0 0 15.75 2.25H14M18 12v7.428c0 .845-.7 1.54-1.54 1.54h-1.648a1.54 1.54 0 0 1-1.54-1.54V12m4.728 0H13.27M13.27 12V4.5A2.25 2.25 0 0 0 11.02 2.25H9.27M13.27 12H8.543a1.54 1.54 0 0 0-1.54 1.54v6.038c0 .844.695 1.54 1.54 1.54h1.411c.618 0 1.178-.37 1.411-.941l.518-1.262" /></svg>
-                        </div>
-                        <div>
-                            <h4 class="text-base font-medium text-stone-800">Premium Fibers</h4>
-                            <p class="text-xs text-stone-400 font-light mt-1">Sourced soft yarns carefully chosen for long-term comfort and style.</p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start gap-4">
-                        <div class="p-2.5 bg-stone-100 text-stone-700 rounded-full">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m9-9H3" /></svg>
-                        </div>
-                        <div>
-                            <h4 class="text-base font-medium text-stone-800">Slow, Minimalist Fashion</h4>
-                            <p class="text-xs text-stone-400 font-light mt-1">Durable treasures engineered carefully against massive industrial waste.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="mt-40 text-center">
-            <span class="text-[10px] uppercase tracking-[0.3em] font-semibold text-stone-400 block mb-3">Workflow</span>
-            <h2 class="text-3xl font-light text-stone-800 mb-16">How Your Order Comes To Life</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-4xl mx-auto relative">
-                <div class="relative z-10 bg-white px-4 py-6 rounded-xl border border-stone-100 shadow-xs">
-                    <div class="w-10 h-10 rounded-full bg-[#bc858a] text-white flex items-center justify-center font-semibold text-xs mx-auto mb-5 shadow-sm">1</div>
-                    <h4 class="text-lg font-medium text-stone-800 mb-2">Choose Your Design</h4>
-                    <p class="text-xs text-stone-500 font-light leading-relaxed">Select your favorite style from our Crochetique collection, or customize your own colors and sizes.</p>
-                </div>
-                
-                <div class="relative z-10 bg-white px-4 py-6 rounded-xl border border-stone-100 shadow-xs">
-                    <div class="w-10 h-10 rounded-full bg-[#bc858a] text-white flex items-center justify-center font-semibold text-xs mx-auto mb-5 shadow-sm">2</div>
-                    <h4 class="text-lg font-medium text-stone-800 mb-2">Handcrafted with Care</h4>
-                    <p class="text-xs text-stone-500 font-light leading-relaxed">We sit down and carefully stitch your piece by hand, loop by loop, ensuring perfect premium quality.</p>
-                </div>
-                
-                <div class="relative z-10 bg-white px-4 py-6 rounded-xl border border-stone-100 shadow-xs">
-                    <div class="w-10 h-10 rounded-full bg-[#bc858a] text-white flex items-center justify-center font-semibold text-xs mx-auto mb-5 shadow-sm">3</div>
-                    <h4 class="text-lg font-medium text-stone-800 mb-2">Packaged & Shipped</h4>
-                    <p class="text-xs text-stone-500 font-light leading-relaxed">Your finished product is neatly wrapped and shipped straight to your doorstep, ready to enjoy.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="mt-40 bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-stone-200/40">
-            <div class="text-center mb-16">
-                <span class="text-[10px] uppercase tracking-[0.3em] font-semibold text-stone-400 block mb-3">Customer Feedback</span>
-                <h2 class="text-3xl font-light text-stone-800 tracking-tight leading-tight">What Our Community Says</h2>
+                <div class="product-title">Cat Paw Design Handwarmers</div>
+                <a href="#" class="btn-shop-now">Shop Now</a>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                
-                <div class="bg-white border border-stone-200/60 rounded-xl p-6 flex flex-col justify-between transition-all hover:shadow-md hover:border-stone-300">
-                    <div>
-                        <div class="flex items-center gap-1 mb-4 text-amber-500/80">
-                            <span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span>
-                        </div>
-                        <p class="text-stone-600 text-xs font-light leading-relaxed mb-6">
-                            "Traditional jasmine gajras hamesha synthetic lagte thay, but these yarn gajras are so elegant and soft! Wore them to a family dholki and everyone kept asking where I got them."
-                        </p>
-                    </div>
-                    <div class="flex items-center gap-3 pt-4 border-t border-stone-200/60">
-                        <div class="w-9 h-9 rounded-full bg-[#bc858a] flex items-center justify-center text-xs font-medium text-stone-100">AK</div>
-                        <div>
-                            <h4 class="text-xs font-medium text-stone-800">Ayesha Khan</h4>
-                        </div>
-                    </div>
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="images/wristlets.jpg" alt="Traditional Gajray Floral Wristlets">
                 </div>
-
-                <div class="bg-white border border-stone-200/60 rounded-xl p-6 flex flex-col justify-between transition-all hover:shadow-md hover:border-stone-300">
-                    <div>
-                        <div class="flex items-center gap-1 mb-4 text-amber-500/80">
-                            <span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span>
-                        </div>
-                        <p class="text-stone-600 text-xs font-light leading-relaxed mb-6">
-                            "Ordered the large forever sunflower as a birthday gift for my best friend. The stitching details are absolutely flawless! It’s the perfect everlasting aesthetic room decor."
-                        </p>
-                    </div>
-                    <div class="flex items-center gap-3 pt-4 border-t border-stone-200/60">
-                        <div class="w-9 h-9 rounded-full bg-[#bc858a] flex items-center justify-center text-xs font-medium text-stone-100">ZM</div>
-                        <div>
-                            <h4 class="text-xs font-medium text-stone-800">Zainab Malik</h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-white border border-stone-200/60 rounded-xl p-6 flex flex-col justify-between transition-all hover:shadow-md hover:border-stone-300">
-                    <div>
-                        <div class="flex items-center gap-1 mb-4 text-amber-500/80">
-                            <span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span>
-                        </div>
-                        <p class="text-stone-600 text-xs font-light leading-relaxed mb-6">
-                            "Unbelievably cute and super warm to wear. The cat paw 3D pads look exactly like the reference layout pictures. Perfect minimalist cozy accessory for winters."
-                        </p>
-                    </div>
-                    <div class="flex items-center gap-3 pt-4 border-t border-stone-200/60">
-                        <div class="w-9 h-9 rounded-full bg-[#bc858a] flex items-center justify-center text-xs font-medium text-stone-100">SF</div>
-                        <div>
-                            <h4 class="text-xs font-medium text-stone-800">Sana Fatima</h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-white border border-stone-200/60 rounded-xl p-6 flex flex-col justify-between transition-all hover:shadow-md hover:border-stone-300">
-                    <div>
-                        <div class="flex items-center gap-1 mb-4 text-amber-500/80">
-                            <span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span><span class="text-xs">★</span>
-                        </div>
-                        <p class="text-stone-600 text-xs font-light leading-relaxed mb-6">
-                            "The premium yarn texture is extremely comfortable and doesn't feel itchy at all. Fits beautifully with a nice modern slouchy drape. 10/10 crafting work!"
-                        </p>
-                    </div>
-                    <div class="flex items-center gap-3 pt-4 border-t border-stone-200/60">
-                        <div class="w-9 h-9 rounded-full bg-[#bc858a] flex items-center justify-center text-xs font-medium text-stone-100">HA</div>
-                        <div>
-                            <h4 class="text-xs font-medium text-stone-800">Hamza Ali</h4>
-                        </div>
-                    </div>
-                </div>
-
+                <div class="product-title">Traditional Gajray Floral Wristlets</div>
+                <a href="#" class="btn-shop-now">Shop Now</a>
             </div>
-        </section>
 
-        <section id="contact-section" class="mt-44 max-w-2xl mx-auto border-t border-stone-300/50 pt-24 text-center">
-            <h2 class="text-3xl font-light text-stone-800 mb-4">Request Custom Piece</h2>
-            <p class="text-sm text-stone-500 font-light mb-10 leading-relaxed">Have a custom request or want a specific design? Feel free to reach out to us directly for personalized orders and updates.</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="https://wa.me/923302588945" target="_blank" class="w-full sm:w-auto px-10 py-3.5 bg-[#bc858a] hover:bg-[#a36f73] text-white text-xs uppercase tracking-wider rounded-sm transition-colors font-medium text-center decoration-none">
-                    Chat on WhatsApp
-                </a>
-                <a href="#" class="w-full sm:
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="images/bouquet.jpg" alt="Make Your Own Bouquet">
+                </div>
+                <div class="product-title">Make Your Own Bouquet</div>
+                <a href="#" class="btn-shop-now">Shop Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="selling-points">
+        <h4>Core Selling Points</h4>
+        <div class="points-grid">
+            <div class="point-item">
+                <span class="point-icon">❤️</span>
+                <p>1: Heart</p>
+            </div>
+            <div class="point-item">
+                <span class="point-icon">🧶</span>
+                <p>2: Yarn</p>
+            </div>
+            <div class="point-item">
+                <span class="point-icon">🌿</span>
+                <p>3: Leaf/ID</p>
+            </div>
+            <div class="point-item">
+                <span class="point-icon">🔄</span>
+                <p>Raw yarn</p>
+            </div>
+            <div class="point-item">
+                <span class="point-icon">🪡</span>
+                <p>Hand-stitching</p>
+            </div>
+            <div class="point-item">
+                <span class="point-icon">📦</span>
+                <p>Packaged & shipped</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
