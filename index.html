@@ -85,7 +85,7 @@
             color: #2D2D2D !important;
             text-transform: uppercase !important;
             letter-spacing: 0.1em !important;
-            font-size: 0.72rem !important;
+            font-size: 0.75rem !important;
             font-weight: 500 !important;
             padding: 0.6rem 2rem !important;
             transition: all 0.3s ease !important;
@@ -267,7 +267,7 @@
         </section>
 
         <section class="mt-40 text-center">
-            <span class="text-[10px] uppercase tracking-[0.3em] font-semibold text-stone-400 block mb-3">Workflow Workflow</span>
+            <span class="text-[10px] uppercase tracking-[0.3em] font-semibold text-stone-400 block mb-3">Workflow</span>
             <h2 class="text-3xl font-light text-stone-800 mb-16">How Your Order Comes To Life</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-4xl mx-auto relative">
@@ -310,181 +310,4 @@
         </section>
     </main>
 
-    <div id="cartSidebar" class="cart-sidebar fixed inset-y-0 right-0 w-full sm:w-96 bg-white shadow-2xl z-50 translate-x-full flex flex-col">
-        <div class="p-6 border-b border-stone-100 flex items-center justify-between">
-            <h2 class="text-xl font-normal text-stone-800">Shopping Bag</h2>
-            <button onclick="toggleCart()" class="text-stone-400 hover:text-black cursor-pointer">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                </svg>
-            </button>
-        </div>
-
-        <div id="cartItems" class="flex-1 overflow-y-auto p-6 space-y-4">
-            <p id="emptyCartText" class="text-stone-400 text-sm text-center py-8">Your bag is empty.</p>
-        </div>
-
-        <div class="p-6 border-t border-stone-100 bg-stone-50">
-            <div class="flex justify-between text-base font-medium text-stone-900 mb-4">
-                <span>Subtotal</span>
-                <span id="cartSubtotal">PKR 0.00</span>
-            </div>
-            <p class="text-xs text-stone-400 mb-6">Shipping charges and order confirmations will be finalized via WhatsApp text.</p>
-            <button onclick="checkoutViaWhatsApp()" class="w-full text-center bg-stone-800 hover:bg-stone-700 text-white font-medium py-3.5 rounded-sm transition-colors tracking-wider uppercase text-xs cursor-pointer">
-                Order via WhatsApp
-            </button>
-        </div>
-    </div>
-
-    <div id="cartOverlay" onclick="toggleCart()" class="fixed inset-0 bg-black/20 z-40 hidden backdrop-blur-xs"></div>
-
-    <footer class="bg-[#F5EFEB] border-t border-stone-200 py-12 text-center text-xs text-stone-400 font-light tracking-wide">
-        <div class="mb-4 text-[16px] text-stone-300 tracking-widest font-normal">🔒 Cash on Delivery Available Across Pakistan</div>
-        <p>&copy; 2026 Art by Heart. All Rights Reserved.</p>
-    </footer>
-
-    <script>
-        let cart = [];
-
-        function toggleCart() {
-            const sidebar = document.getElementById('cartSidebar');
-            const overlay = document.getElementById('cartOverlay');
-            sidebar.classList.toggle('translate-x-full');
-            overlay.classList.toggle('hidden');
-        }
-
-        function addToCart(name, price) {
-            const existingItem = cart.find(item => item.name === name);
-            if (existingItem) {
-                existingItem.quantity += 1;
-            } else {
-                cart.push({ name, price, quantity: 1 });
-            }
-            updateCartUI();
-            toggleCart();
-        }
-
-        function updateQuantity(name, amount) {
-            const item = cart.find(item => item.name === name);
-            if (item) {
-                item.quantity += amount;
-                if (item.quantity <= 0) {
-                    cart = cart.filter(i => i.name !== name);
-                }
-            }
-            updateCartUI();
-        }
-
-        function updateCartUI() {
-            const cartItemsContainer = document.getElementById('cartItems');
-            const emptyText = document.getElementById('emptyCartText');
-            const countBadge = document.getElementById('cartCount');
-            const subtotalText = document.getElementById('cartSubtotal');
-            
-            cartItemsContainer.innerHTML = '';
-            let totalItems = 0;
-            let subtotal = 0;
-
-            if (cart.length === 0) {
-                cartItemsContainer.appendChild(emptyText);
-                emptyText.classList.remove('hidden');
-            } else {
-                emptyText.classList.add('hidden');
-                cart.forEach(item => {
-                    totalItems += item.quantity;
-                    subtotal += (item.price * item.quantity);
-
-                    const itemElement = document.createElement('div');
-                    itemElement.className = 'flex items-center justify-between border-b border-stone-100 pb-4';
-                    itemElement.innerHTML = `
-                        <div>
-                            <h4 class="text-sm font-medium text-stone-800">${item.name}</h4>
-                            <p class="text-xs text-stone-400">PKR ${item.price.toLocaleString()}.00</p>
-                        </div>
-                        <div class="flex items-center gap-2 bg-stone-100 px-2.5 py-1 rounded">
-                            <button onclick="updateQuantity('${item.name}', -1)" class="text-sm px-1 font-bold text-stone-500 hover:text-black cursor-pointer">-</button>
-                            <span class="text-xs font-medium w-4 text-center">${item.quantity}</span>
-                            <button onclick="updateQuantity('${item.name}', 1)" class="text-sm px-1 font-bold text-stone-500 hover:text-black cursor-pointer">+</button>
-                        </div>
-                    `;
-                    cartItemsContainer.appendChild(itemElement);
-                });
-            }
-
-            countBadge.innerText = totalItems;
-            subtotalText.innerText = `PKR ${subtotal.toLocaleString()}.00`;
-        }
-
-        function checkoutViaWhatsApp() {
-            if (cart.length === 0) {
-                alert("Your basket is empty. Add items before placing an order!");
-                return;
-            }
-
-            let phoneNumber = "923302588945";
-            let message = "Hi Art by Heart! 🌸 I would like to order the following items:\n\n";
-            let subtotal = 0;
-
-            cart.forEach((item, index) => {
-                let itemTotal = item.price * item.quantity;
-                subtotal += itemTotal;
-                message += `${index + 1}. *${item.name}* (x${item.quantity}) - PKR ${itemTotal.toLocaleString()}.00\n`;
-            });
-
-            message += `\n*Total Cart Amount:* PKR ${subtotal.toLocaleString()}.00\n\nPlease guide me regarding delivery parameters! Thank you.`;
-            let encodedMessage = encodeURIComponent(message);
-            window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
-        }
-
-        /* Interactive Segment Filter Function */
-        function filterCategory(cat) {
-            // Update active tabs styling
-            const tabs = ['all', 'wearables', 'flowers', 'keychains', 'gajray'];
-            tabs.forEach(t => {
-                const el = document.getElementById(`tab-${t}`);
-                if(el) {
-                    if(t === cat) el.className = "category-tab-active pb-3 cursor-pointer text-stone-800 transition-all";
-                    else el.className = "pb-3 cursor-pointer hover:text-stone-800 transition-all";
-                }
-            });
-
-            // Filter the elements
-            const cards = document.querySelectorAll('.premium-3d-card');
-            cards.forEach(card => {
-                const cardCat = card.getAttribute('data-cat');
-                if (cat === 'all' || cardCat === cat) {
-                    card.style.display = "flex";
-                } else {
-                    card.style.display = "none";
-                }
-            });
-        }
-
-        function triggerCustomBouquet() {
-            let phoneNumber = "923302588945";
-            let message = "Hi Art by Heart! 🌸 I am interested in building a custom Crochet Bouquet. Please share the available flower variations and options with me!";
-            window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
-        }
-
-        function filterProducts() {
-            const query = document.getElementById('searchBar').value.toLowerCase();
-            const cards = document.querySelectorAll('.premium-3d-card');
-            cards.forEach(card => {
-                const productName = card.getAttribute('data-name');
-                if (productName.includes(query)) card.style.display = "flex";
-                else card.style.display = "none";
-            });
-        }
-
-        function filterProductsMobile() {
-            const query = document.getElementById('searchBarMobile').value.toLowerCase();
-            const cards = document.querySelectorAll('.premium-3d-card');
-            cards.forEach(card => {
-                const productName = card.getAttribute('data-name');
-                if (productName.includes(query)) card.style.display = "flex";
-                else card.style.display = "none";
-            });
-        }
-    </script>
-</body>
-</html>
+    <div id="cartSidebar" class="cart-sidebar fixed inset
